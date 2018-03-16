@@ -3,17 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://alessandrominoccheri.github.io/</loc>
+    <loc>https://alessandrominoccheri.github.io/public/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://alessandrominoccheri.github.io/categories/</loc>
+    <loc>https://alessandrominoccheri.github.io/public/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://alessandrominoccheri.github.io/tags/</loc>
+    <loc>https://alessandrominoccheri.github.io/public/tags/</loc>
     <priority>0</priority>
   </url>
   
