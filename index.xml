@@ -6,13 +6,22 @@
     <description>Recent content on Alessandro Minoccheri</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Mar 2018 15:09:20 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 21 Mar 2018 14:13:16 +0100</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Php7 2</title>
+      <title>About me</title>
+      <link>/about/</link>
+      <pubDate>Wed, 21 Mar 2018 14:13:16 +0100</pubDate>
+      
+      <guid>/about/</guid>
+      <description> Alessandro Minoccheri </description>
+    </item>
+    
+    <item>
+      <title>PHP 7.2</title>
       <link>/post/php7-2/</link>
       <pubDate>Tue, 20 Mar 2018 15:09:20 +0100</pubDate>
       
