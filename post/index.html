@@ -5,7 +5,10 @@
   <meta charset="utf-8" />
 
   
-  <title>Alessandro Minoccheri</title>
+  <title>
+  Posts
+   | Alessandro Minoccheri
+</title>
 
   
   
@@ -19,17 +22,19 @@
   <meta name="description" content="" />
 
   
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@minompi" />
-  <meta name="twitter:title" content="Alessandro Minoccheri" />
-  <meta name="twitter:description" content="" />
-  <meta name="twitter:image" content="/img/avatar.jpg" />
+  
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@minompi" />
+    <meta name="twitter:title" content="Posts" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="/img/avatar.jpg" />
+  
 
   
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Alessandro Minoccheri" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Posts" />
   <meta property="og:description" content="" />
-  <meta property="og:url" content="/" />
+  <meta property="og:url" content="/post/" />
   <meta property="og:image" content="/img/avatar.jpg" />
 
 
@@ -38,7 +43,7 @@
 <meta name="generator" content="Hugo 0.37.1" />
 
 
-<link rel="canonical" href="/" />
+<link rel="canonical" href="/post/" />
 <link rel="alternative" href="/index.xml" title="Alessandro Minoccheri" type="application/atom+xml" />
 
 
@@ -72,6 +77,8 @@
 <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5fbf5e" />
 
 
+
+<link rel="stylesheet" href="//cdn.bootcss.com/video.js/6.2.8/alt/video-js-cdn.min.css" />
 
 <link rel="stylesheet" href="/css/bundle.css" />
 <link rel="stylesheet" href="/css/style.css" />
@@ -107,7 +114,7 @@
   <header class="site-header">
   <img class="avatar" src="img/alessandro_minoccheri.jpg" alt="Avatar">
   
-  <h1 class="title">Alessandro Minoccheri</h1>
+  <h2 class="title">Alessandro Minoccheri</h2>
   
   <p class="subtitle"></p>
   <button class="menu-toggle" type="button">
@@ -122,9 +129,9 @@
       
         <li class="menu-item
             
+            
+            
               is-active
-            
-            
             ">
             <a href="/">Home</a>
           </li>
@@ -197,7 +204,7 @@
 
   <section class="main post-list">
     <header class="list-header offscreen">
-      <h2 class="list-label">All Posts</h2>
+      <h2 class="list-label">Posts List</h2>
     </header>
     
     
@@ -225,6 +232,30 @@
 </footer>
 
 
+
+<script async src="//cdn.bootcss.com/video.js/6.2.8/alt/video.novtt.min.js"></script>
+<script async src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+      extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+  });
+</script>
+<script type="text/x-mathjax-config">
+  // Fix <code> tags after MathJax finishes running. This is a
+  // hack to overcome a shortcoming of Markdown. Discussion at
+  // https://github.com/mojombo/jekyll/issues/199
+  MathJax.Hub.Queue(() => {
+    MathJax.Hub.getAllJax().map(v => v.SourceElement().parentNode.className += ' has-jax');
+  });
+</script>
 
 <script src="/js/bundle.js"></script>
 

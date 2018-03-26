@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Alessandro Minoccheri</title>
-    <link>/</link>
-    <description>Recent content on Alessandro Minoccheri</description>
+    <title>Posts on Alessandro Minoccheri</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on Alessandro Minoccheri</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 20 Mar 2018 15:09:20 +0100</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
