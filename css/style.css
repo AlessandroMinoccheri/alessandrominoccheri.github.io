@@ -3,3 +3,7 @@
   height: auto;
   border-radius: 0;
 }
+
+.avatar:hover{
+    transform:rotate(0);
+}
