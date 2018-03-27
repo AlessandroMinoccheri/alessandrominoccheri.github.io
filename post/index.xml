@@ -12,12 +12,14 @@
     
     
     <item>
-      <title>PHP 7.2</title>
+      <title>Better performances, high security, deprecated functions: here&#39;s  all the news about PHP 7.2</title>
       <link>/post/php7-2/</link>
       <pubDate>Tue, 20 Mar 2018 15:09:20 +0100</pubDate>
       
       <guid>/post/php7-2/</guid>
-      <description></description>
+      <description>PHP 7.2 has many features about security, implementations and deprecated functions. In addition, it introduces a performance increase (already in version 7 it was done a great work): PHP 7.2 is 20% faster than version 7.0 and 10% faster than version 7.1.
+Here&amp;rsquo;s all the highlights offered by this new version.
+Type hinting argument Since PHP 5 it was possibile to specify the argument type passed to a function.</description>
     </item>
     
   </channel>
