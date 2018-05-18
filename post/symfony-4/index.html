@@ -270,7 +270,7 @@ The web root directory where are stored public and static files like images, sty
 <h2 id="environment-variables">Environment Variables</h2>
 
 <p>When designing your system, you may wish to have different variables that can be not the same as in other environments.
-In previous symfony versions you put that variables into a file called <strong>parameters.yml</strong> and in parameters.yml.yourenv. Now that file doesn&rsquo;t exist (you can obviously change your code to use it but it&rsquo;s a little bit complex) and you need to write those variables in a file called .env in the project root.
+In previous Symfony versions you put that variables into a file called <strong>parameters.yml</strong> and in parameters.yml.yourenv. Now that file doesn&rsquo;t exist (you can obviously change your code to use it but it&rsquo;s a little bit complex) and you need to write those variables in a file called .env in the project root.
 Obviously you can have different .env files but it depends on how many environments you have into your application.
 Here is a simple <strong>.env</strong> file:</p>
 
@@ -299,9 +299,9 @@ If you don&rsquo;t already have it in your project you can launch this command t
 
 <h2 id="autowiring">Autowiring</h2>
 
-<p><strong>Autowiring</strong> is one of the most powerful feature in Symfony 4 (you can use it since symfony 3.3 version).
+<p><strong>Autowiring</strong> is one of the most powerful feature in Symfony 4 (you can use it since Symfony 3.3 version).
 It allows you to manage services in the container with minimal configuration, without specifying, for example, all the arguments that have to be passed to your service (now also controllers are services!).
-So if you have a service class where you need to pass into __construct method some other services you only need to enable autowiring and symfony will do it for you!</p>
+So if you have a service class where you need to pass into __construct method some other services you only need to enable autowiring and Symfony will do it for you!</p>
 
 <p>Example:</p>
 
@@ -356,8 +356,8 @@ If you want to have different configuration for your service, for example a priv
         public: false
 </code></pre>
 
-<p>So the Autowire option indicates to symfony to automatically inject dependencies in your services.
-Autoconfigure option indicates to symfony to automatically register your services as commands, event subscribers, etc.</p>
+<p>So the Autowire option indicates to Symfony to automatically inject dependencies in your services.
+Autoconfigure option indicates to Symfony to automatically register your services as commands, event subscribers, etc.</p>
 
 <p>Now also controllers are services so it&rsquo;s easy to make unit tests on it instead of using integration tests that are slower.
 So now you can also inject services inside your controller like this:</p>
@@ -394,7 +394,7 @@ Recipes are stored in two different github repositories:</p>
 <p>Inside this site <a href="https://symfony.sh/">Symfony</a> you can view the recipes complete list where you can find how to install them into your project.
 Sometimes there is an alias so you can use it like this one to be faster and to remember the command easier:</p>
 
-<pre><code>composere require logger
+<pre><code>composer require logger
 </code></pre>
 
 <p>A recipe contains a <strong>manifest.json</strong> file where the package configuration is stored. When Flex installs this package it gets the manifest.json file and applies default configuration to your project, so you can use the new library immediately without writing any configuration.</p>
@@ -423,7 +423,7 @@ When using the message bus with <strong>Symfony&rsquo;s FrameworkBundle</strong>
 
 <p>Once the message is dispatched to the bus it will be handled by a &ldquo;message handler&rdquo;.
 A message handler is a PHP callable (i.e. a function or an instance of a class) that will do the required processing for your message.
-In order to send and receive messages, you will have to configure an adapter. An adapter will be responsible for communicating with your message broker or 3rd parties.
+In order to send and receive messages, you will have to configure the adapter. The adapter will be responsible for communicating with your message broker or 3rd parties.
 Then the receiver Receiver deserializes and forwards the message to the handler(s). This can be a message queue puller or an API endpoint.</p>
 
 <p>For further information contact me or follow  me on:</p>
