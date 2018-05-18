@@ -377,8 +377,9 @@ If your package doesn&rsquo;t exist, it fallbacks on Composer standard behaviour
 Recipes are stored in two different github repositories:</p>
 
 <ul>
-<li><a href="https://github.com/symfony/recipes">Recipe</a>, is a curated list of recipes for high quality and maintained packages. Symfony Flex looks into this repository by default.</li>
-<li><a href="https://github.com/symfony/recipes-contrib">Recipes-Contrib</a>, contains all the recipes created by the community. All of them are guaranteed to work, but their associated packages could be unmaintained. Symfony Flex ignores these recipes by default, but you can execute this command to start using them in your project:</li>
+<li><p><a href="https://github.com/symfony/recipes">Recipe</a>, is a curated list of recipes for high quality and maintained packages. Symfony Flex looks into this repository by default.</p></li>
+
+<li><p><a href="https://github.com/symfony/recipes-contrib">Recipes-Contrib</a>, contains all the recipes created by the community. All of them are guaranteed to work, but their associated packages could be unmaintained. Symfony Flex ignores these recipes by default, but you can execute this command to start using them in your project:</p></li>
 </ul>
 
 <pre><code>composer config extra.symfony.allow-contrib true
@@ -406,10 +407,13 @@ In order to install the component, you need to launch from your console:</p>
 
 <p>Sender serializes and sends a message to something. For example this something can be a message broker or a third party API.
 The bus dispatches the message. The behaviour of the bus is in its ordered middleware stack. The component comes with a set of middleware that you can use.
-When using the message bus with <strong>Symfony&rsquo;s FrameworkBundle</strong>, the following middleware are configured for you:
-<strong>LoggingMiddleware</strong> (logs the processing of your messages)
-<strong>SendMessageMiddleware</strong> (enables asynchronous processing)
-<strong>HandleMessageMiddleware</strong> (calls the registered handle)</p>
+When using the message bus with <strong>Symfony&rsquo;s FrameworkBundle</strong>, the following middleware are configured for you:</p>
+
+<p><strong>LoggingMiddleware</strong> (logs the processing of your messages)</p>
+
+<p><strong>SendMessageMiddleware</strong> (enables asynchronous processing)</p>
+
+<p><strong>HandleMessageMiddleware</strong> (calls the registered handle)</p>
 
 <p>Once the message is dispatched to the bus it will be handled by a &ldquo;message handler&rdquo;.
 A message handler is a PHP callable (i.e. a function or an instance of a class) that will do the required processing for your message.
