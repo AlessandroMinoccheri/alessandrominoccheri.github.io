@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>/post/two-authentications-systems-into-symfony/</loc>
+    <lastmod>2018-07-17T15:43:08+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/symfony-4/</loc>
     <lastmod>2018-05-18T14:42:37+02:00</lastmod>
   </url>
@@ -30,7 +35,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2018-05-18T14:42:37+02:00</lastmod>
+    <lastmod>2018-07-17T15:43:08+02:00</lastmod>
     <priority>0</priority>
   </url>
   

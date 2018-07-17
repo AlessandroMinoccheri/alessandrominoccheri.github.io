@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8" />
+
+  
+  <title>Two Authentications Systems Into Symfony</title>
+
+  
+  
+
+
+
+
+
+  
+  <meta name="author" content="" />
+  <meta name="description" content="Many times in your application you have a login system based on JWT Token. At a certain moment you need your application to be able to answer to a rest api request made by another application. So you can give the possibility to login with the JWT Token to it but it&amp;rsquo;s not safe. So you need to implement an api token authentication for your application but this means that your application has to manage both authenticators: JWT and Api Token." />
+
+  
+  
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@minompi" />
+    <meta name="twitter:title" content="Two Authentications Systems Into Symfony" />
+    <meta name="twitter:description" content="Many times in your application you have a login system based on JWT Token. At a certain moment you need your application to be able to answer to a rest api request made by another application. So you can give the possibility to login with the JWT Token to it but it&amp;rsquo;s not safe. So you need to implement an api token authentication for your application but this means that your application has to manage both authenticators: JWT and Api Token." />
+    <meta name="twitter:image" content="/img/avatar.jpg" />
+  
+
+  
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Two Authentications Systems Into Symfony" />
+  <meta property="og:description" content="Many times in your application you have a login system based on JWT Token. At a certain moment you need your application to be able to answer to a rest api request made by another application. So you can give the possibility to login with the JWT Token to it but it&amp;rsquo;s not safe. So you need to implement an api token authentication for your application but this means that your application has to manage both authenticators: JWT and Api Token." />
+  <meta property="og:url" content="/post/two-authentications-systems-into-symfony/" />
+  <meta property="og:image" content="/img/avatar.jpg" />
+
+
+
+
+<meta name="generator" content="Hugo 0.37.1" />
+
+
+<link rel="canonical" href="/post/two-authentications-systems-into-symfony/" />
+<link rel="alternative" href="/index.xml" title="Alessandro Minoccheri" type="application/atom+xml" />
+
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="format-detection" content="telephone=no,email=no,adress=no" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+
+
+<meta name="robots" content="index,follow" />
+<meta name="referrer" content="origin-when-cross-origin" />
+<meta name="google-site-verification" content="GZsV12xJYp9V0PX9-GoJgG2SjrVjkps0IP4rMGTpzoE" />
+
+
+
+
+
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Alessandro Minoccheri" />
+<meta name="msapplication-tooltip" content="Alessandro Minoccheri" />
+<meta name='msapplication-navbutton-color' content="#5fbf5e" />
+<meta name="msapplication-TileColor" content="#5fbf5e" />
+<meta name="msapplication-TileImage" content="/img/tile-image-windows.png" />
+<link rel="icon" href="/img/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png" />
+<link rel="icon" sizes="192x192" href="/img/touch-icon-android.png" />
+<link rel="apple-touch-icon" href="/img/touch-icon-apple.png" />
+<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5fbf5e" />
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/video.js/6.2.8/alt/video-js-cdn.min.css" />
+
+<link rel="stylesheet" href="/css/bundle.css" />
+<link rel="stylesheet" href="/css/style.css" />
+
+
+  
+  <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <script src="//cdn.bootcss.com/video.js/6.2.8/ie8/videojs-ie8.min.js"></script>
+  <![endif]-->
+
+<!--[if lte IE 11]>
+    <script src="//cdn.bootcss.com/classlist/1.1.20170427/classList.min.js"></script>
+  <![endif]-->
+
+
+<script src="//cdn.bootcss.com/object-fit-images/3.2.3/ofi.min.js"></script>
+
+
+<script src="//cdn.bootcss.com/smooth-scroll/12.1.4/js/smooth-scroll.polyfills.min.js"></script>
+
+
+</head>
+  <body>
+    
+    <div class="suspension">
+      <a title="Go to top" class="to-top is-hide"><span class="icon icon-up"></span></a>
+      
+        
+      
+    </div>
+    
+    
+  <header class="site-header">
+  <img class="avatar" src="https://alessandrominoccheri.github.io/img/alessandro_minoccheri.jpg" alt="Avatar">
+  
+  <h2 class="title">Alessandro Minoccheri</h2>
+  
+  <p class="subtitle"></p>
+  <button class="menu-toggle" type="button">
+    <span class="icon icon-menu"></span>
+  </button>
+  <nav class="site-menu collapsed">
+    <h2 class="offscreen">Main Menu</h2>
+    <ul class="menu-list">
+      
+      
+      
+      
+        <li class="menu-item
+            
+            
+            
+              is-active
+            ">
+            <a href="/">Home</a>
+          </li>
+      
+        <li class="menu-item
+            
+            
+            ">
+            <a href="/about/">About Me</a>
+          </li>
+      
+    </ul>
+  </nav>
+  <nav class="social-menu collapsed">
+    <h2 class="offscreen">Social Networks</h2>
+    <ul class="social-list">
+
+      
+      <li class="social-item">
+        <a href="mailto:alessandro.minoccheri@gmail.com" title="Email"><span class="icon icon-email"></span></a>
+      </li>
+
+      
+      <li class="social-item">
+        <a href="//github.com/AlessandroMinoccheri" title="GitHub"><span class="icon icon-github"></span></a>
+      </li>
+
+      <li class="social-item">
+        <a href="//twitter.com/minompi" title="Twitter"><span class="icon icon-twitter"></span></a>
+      </li>
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <li class="social-item">
+        <a href="//www.linkedin.com/in/alessandro-minoccheri-68756598" title="Linkedin"><span class="icon icon-linkedin"></span></a>
+      </li>
+
+      
+
+      
+
+      
+
+      <li class="social-item">
+        <a href="/index.xml"><span class="icon icon-rss" title="RSS"></span></a>
+      </li>
+
+    </ul>
+  </nav>
+</header>
+
+  <section class="main post-detail">
+    <header class="post-header">
+      <h1 class="post-title">Two Authentications Systems Into Symfony</h1>
+      <p class="post-meta">@ · Jul 17, 2018 · 4 min read</p>
+    </header>
+    <article class="post-content"><p>Many times in your application you have a login system based on <strong>JWT Token</strong>.
+At a certain moment you need your application to be able to answer to a rest api request made by another application. So you can give the possibility to login with the JWT Token to it but it&rsquo;s not safe.
+So you need to implement an api token authentication for your application but this means that your application has to <strong>manage both authenticators</strong>: JWT and <strong>Api Token</strong>.</p>
+
+<p><img src="https://alessandrominoccheri.github.io/img/symfony-authentication.jpg" alt="Directory Structure Image" /></p>
+
+<p>Well, how can you use both authentication system?</p>
+
+<p>First step is to make the first authenticator work as if it were the only one.</p>
+
+<p><strong>security.yml</strong></p>
+
+<pre><code>rest_api:
+    pattern:   ^/api/
+    stateless: true
+    guard:
+        authenticators:
+           - lexik_jwt_authentication.jwt_token_authenticator
+</code></pre>
+
+<p>After that start to implement another authenticator into security.yml file like this:</p>
+
+<pre><code>rest_api:
+    pattern:   ^/api/
+    stateless: true
+    guard:
+        authenticators:
+           - lexik_jwt_authentication.jwt_token_authenticator
+           - AppBundle\Security\ApiKeyAuthenticator
+        entry_point: lexik_jwt_authentication.jwt_token_authenticator
+</code></pre>
+
+<p>In this configuration you have specified a two different authenticators system and a entry point.
+Note that the entry point is mandatory! Entry point highlights the principle authenticator system.</p>
+
+<p>Now you need to add the field apiKey into your user entity, something like this:</p>
+
+<pre><code>/**
+ * @var string
+ *
+ * @ORM\Column(name=&quot;api_key&quot;, type=&quot;string&quot;, length=255, nullable=false, unique=true)
+ */
+private $apiKey;
+</code></pre>
+
+<p>After that you need to create your custom ApiKeyAuthenticator, for example:</p>
+
+<pre><code>namespace AppBundle\Security;
+
+use AppBundle\Entity\PvpUser;
+use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
+use Symfony\Component\Security\Core\Exception\AuthenticationException;
+use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Security\Core\User\UserProviderInterface;
+use Symfony\Component\Security\Guard\AuthenticatorInterface;
+use Symfony\Component\Security\Guard\Token\GuardTokenInterface;
+use Symfony\Component\Security\Guard\Token\PostAuthenticationGuardToken;
+
+class ApiKeyAuthenticator implements AuthenticatorInterface
+{
+    private $em;
+
+    public function __construct(EntityManagerInterface $em)
+    {
+        $this-&gt;em = $em;
+    }
+
+    public function start(Request $request, AuthenticationException $authException = null)
+    {
+        return new Response('Auth header required', 401);
+    }
+
+    public function supports(Request $request)
+    {
+        return $request-&gt;headers-&gt;has('apikey');
+    }
+
+    public function getCredentials(Request $request)
+    {
+        return array(
+            'token' =&gt; $request-&gt;headers-&gt;get('apikey'),
+        );
+    }
+
+    public function getUser($credentials, UserProviderInterface $userProvider)
+    {
+        $apiKey = $credentials['token'];
+
+        if (null === $apiKey) {
+            return;
+        }
+
+        $user = $this-&gt;em-&gt;getRepository(User::class)-&gt;findOneByApiKey($apiKey);
+
+        if (null == $user) {
+            return null;
+        }
+
+        return $userProvider-&gt;loadUserByUsername($user-&gt;getUsername());
+    }
+
+    public function checkCredentials($credentials, UserInterface $user)
+    {
+        //here you can check password if necessary
+        return true;
+    }
+
+    public function createAuthenticatedToken(UserInterface $user, $providerKey)
+    {
+        return new PostAuthenticationGuardToken(
+            $user,
+            $providerKey,
+            $user-&gt;getRoles()
+        );
+    }
+
+    public function onAuthenticationFailure(Request $request, AuthenticationException $exception)
+    {
+        return new Response('Authentication Failure', 401);
+    }
+
+    public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey)
+    {
+        return null;
+    }
+
+    public function supportsRememberMe()
+    {
+        return false;
+    }
+}
+</code></pre>
+
+<p>Explanation of functions</p>
+
+<p><strong>start</strong></p>
+
+<pre><code>This is called when an anonymous request accesses a resource that requires authentication. The job of this method is to return some response that &quot;helps&quot; the user start the authentication process.
+ It must return a Response object
+</code></pre>
+
+<p><strong>supports</strong>
+    This function indicates if the authenticator supports the given Request
+    It must return a boolean value</p>
+
+<p><strong>getCredentials</strong>
+    This function gets the authentication credentials from the request and returns them into an array or variable, it depends on your system</p>
+
+<p><strong>getUser</strong>
+    Returns a UserInterface object based on the credentials.
+    It must return a UserInterface object or null.</p>
+
+<p><strong>checkCredentials</strong>
+    Returns true if the credentials are valid.
+    It must return a boolean value</p>
+
+<p><strong>createAuthenticatedToken</strong>
+    Creates an authenticated token for the given user
+    It must return a GuardTokenInterface object</p>
+
+<p><strong>onAuthenticationFailure</strong>
+    This function is called when authentication has been executed, but has failed (e.g. wrong apikey).
+    It must return a Response object or null</p>
+
+<p><strong>onAuthenticationSuccess</strong>
+    This function is called when authentication has been executed successfully.
+    It must return a Response object or null</p>
+
+<p><strong>supportsRememberMe</strong>
+    This function indicates if authentication supports the remember me function
+    It must return a boolean value</p>
+
+<p>In this code we check in every request if there is the key apikey into the headers.
+If that header exists the authenticator tries to load an user by the apikey stored into the database. Then if the user is found, checks if it is allowed to access the resource requested.</p>
+
+<p>In this way you can use <strong>both authenticator</strong> for all routes.
+But if you want to close only some routes you can specify many rules into your <strong>security.yml</strong></p>
+</article>
+    <footer class="post-footer">
+      
+      <p class="post-copyright">
+        
+      </p>
+    </footer>
+    
+      
+    
+  </section>
+  <footer class="site-footer">
+  <p>© 2017-2018 Alessandro Minoccheri</p>
+  <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/laozhu/hugo-nuo" target="_blank">Nuo</a>.</p>
+  
+</footer>
+
+
+
+<script async src="//cdn.bootcss.com/video.js/6.2.8/alt/video.novtt.min.js"></script>
+<script async src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+      extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+  });
+</script>
+<script type="text/x-mathjax-config">
+  // Fix <code> tags after MathJax finishes running. This is a
+  // hack to overcome a shortcoming of Markdown. Discussion at
+  // https://github.com/mojombo/jekyll/issues/199
+  MathJax.Hub.Queue(() => {
+    MathJax.Hub.getAllJax().map(v => v.SourceElement().parentNode.className += ' has-jax');
+  });
+</script>
+
+<script src="/js/bundle.js"></script>
+
+
+
+
+  </body>
+</html>

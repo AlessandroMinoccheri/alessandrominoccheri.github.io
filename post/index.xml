@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Alessandro Minoccheri</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 18 May 2018 14:42:37 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 17 Jul 2018 15:43:08 +0200</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Two Authentications Systems Into Symfony</title>
+      <link>/post/two-authentications-systems-into-symfony/</link>
+      <pubDate>Tue, 17 Jul 2018 15:43:08 +0200</pubDate>
+      
+      <guid>/post/two-authentications-systems-into-symfony/</guid>
+      <description>Many times in your application you have a login system based on JWT Token. At a certain moment you need your application to be able to answer to a rest api request made by another application. So you can give the possibility to login with the JWT Token to it but it&amp;rsquo;s not safe. So you need to implement an api token authentication for your application but this means that your application has to manage both authenticators: JWT and Api Token.</description>
+    </item>
     
     <item>
       <title>Symfony 4 Installation and new features</title>
