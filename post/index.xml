@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Alessandro Minoccheri</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Jul 2018 15:43:08 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 02 Oct 2018 08:58:31 +0200</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Using Bitbucket Private Repository in Your Projects</title>
+      <link>/post/bitbucket-private-repository-in-your-projects/</link>
+      <pubDate>Tue, 02 Oct 2018 08:58:31 +0200</pubDate>
+      
+      <guid>/post/bitbucket-private-repository-in-your-projects/</guid>
+      <description>Many times you may like to use your personal private library in another project. For example, you may have many private projects that share a common library that can&amp;rsquo;t be open source for your business. You can use Packagist and pay to have a private repository or you can use Bitbucket with its FREE private repositories.
+To include your private Bitbucket repository via Composer you need to add this lines into your composer.</description>
+    </item>
     
     <item>
       <title>Two Authentications Systems Into Symfony</title>

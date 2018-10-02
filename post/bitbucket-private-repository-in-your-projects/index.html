@@ -5,10 +5,7 @@
   <meta charset="utf-8" />
 
   
-  <title>
-  Posts
-   | Alessandro Minoccheri software web developer
-</title>
+  <title>Using Bitbucket Private Repository in Your Projects</title>
 
   
   
@@ -19,22 +16,25 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="" />
+  <meta name="description" content="Many times you may like to use your personal private library in another project. For example, you may have many private projects that share a common library that can&amp;rsquo;t be open source for your business. You can use Packagist and pay to have a private repository or you can use Bitbucket with its FREE private repositories.
+To include your private Bitbucket repository via Composer you need to add this lines into your composer." />
 
   
   
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@minompi" />
-    <meta name="twitter:title" content="Posts" />
-    <meta name="twitter:description" content="" />
+    <meta name="twitter:title" content="Using Bitbucket Private Repository in Your Projects" />
+    <meta name="twitter:description" content="Many times you may like to use your personal private library in another project. For example, you may have many private projects that share a common library that can&amp;rsquo;t be open source for your business. You can use Packagist and pay to have a private repository or you can use Bitbucket with its FREE private repositories.
+To include your private Bitbucket repository via Composer you need to add this lines into your composer." />
     <meta name="twitter:image" content="/img/avatar.jpg" />
   
 
   
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Posts" />
-  <meta property="og:description" content="" />
-  <meta property="og:url" content="/post/" />
+  <meta property="og:title" content="Using Bitbucket Private Repository in Your Projects" />
+  <meta property="og:description" content="Many times you may like to use your personal private library in another project. For example, you may have many private projects that share a common library that can&amp;rsquo;t be open source for your business. You can use Packagist and pay to have a private repository or you can use Bitbucket with its FREE private repositories.
+To include your private Bitbucket repository via Composer you need to add this lines into your composer." />
+  <meta property="og:url" content="/post/bitbucket-private-repository-in-your-projects/" />
   <meta property="og:image" content="/img/avatar.jpg" />
 
 
@@ -43,7 +43,7 @@
 <meta name="generator" content="Hugo 0.37.1" />
 
 
-<link rel="canonical" href="/post/" />
+<link rel="canonical" href="/post/bitbucket-private-repository-in-your-projects/" />
 <link rel="alternative" href="/index.xml" title="Alessandro Minoccheri" type="application/atom+xml" />
 
 
@@ -107,6 +107,8 @@
     
     <div class="suspension">
       <a title="Go to top" class="to-top is-hide"><span class="icon icon-up"></span></a>
+      
+        
       
     </div>
     
@@ -209,70 +211,47 @@
   </nav>
 </header>
 
-  <section class="main post-list">
-    <header class="list-header offscreen">
-      <h2 class="list-label">Posts List</h2>
+  <section class="main post-detail">
+    <header class="post-header">
+      <h1 class="post-title">Using Bitbucket Private Repository in Your Projects</h1>
+      <p class="post-meta">@ · Oct 2, 2018 · 2 min read</p>
     </header>
+    <article class="post-content"><p>Many times you may like to use your personal private library in another project.
+For example, you may have many private projects that share a common library that can&rsquo;t be open source for your business.
+You can use Packagist and pay to have a private repository or you can use Bitbucket with its FREE private repositories.</p>
+
+<p>To include your private Bitbucket repository via Composer you need to add this lines into your composer.json:</p>
+
+<p>&ldquo;repositories&rdquo;:[
+     {
+         &ldquo;type&rdquo;: &ldquo;vcs&rdquo;,
+         &ldquo;url&rdquo; : &ldquo;git@bitbucket.org:yourName/yourRepository.git&rdquo;
+     }
+ ]</p>
+
+<p>VCS stands for version control system. This includes versioning systems like git, svn, fossil or hg. Composer has a repository type for installing packages from these systems.</p>
+
+<p>If you launch composer install now, you have to put a Consumer key into your CLI (command line interface).
+ This isn&rsquo;t a problem but if you have continuous integration, or your deploy system launches composer install the command, you must have an automatic system able to insert the consumer key or some magic script to manage it.</p>
+
+<p>So, to avoid this problem you need to open your main repository, from Bitbucket for example, create an ssh key and copy the public key.</p>
+
+<p><img src="https://alessandrominoccheri.github.io/img/generate-ssh-key.jpg" alt="Directory Structure Image" /></p>
+
+<p>After that you need to open your private library from Bitbucket, add an access ssh key and paste the public key created previously.</p>
+
+<p><img src="https://alessandrominoccheri.github.io/img/add-ssh-key.jpg" alt="Directory Structure Image" /></p>
+
+<p>Now if you launch composer install any request comes up into your CLI and you can have a perfect automatic deployment.</p>
+</article>
+    <footer class="post-footer">
+      
+      <p class="post-copyright">
+        
+      </p>
+    </footer>
     
-    
       
-        <article class="post-entry">
-  <header class="post-header">
-    <h3 class="post-title"><a href="/post/bitbucket-private-repository-in-your-projects/" class="post-link">Using Bitbucket Private Repository in Your Projects</a></h3>
-    <p class="post-meta">@ · Oct 2, 2018 · 2 min read</p>
-  </header>
-  
-  <p class="post-summary">Many times you may like to use your personal private library in another project. For example, you may have many private projects that share a common library that can’t be open source for your business. You can use Packagist and pay to have a private repository or you can use Bitbucket with its FREE private repositories.
-To include your private Bitbucket repository via Composer you need to add this lines into your composer.</p>
-  <footer class="post-footer">
-    <a class="read-more" href="/post/bitbucket-private-repository-in-your-projects/">Read More →</a>
-  </footer>
-</article>
-
-      
-        <article class="post-entry">
-  <header class="post-header">
-    <h3 class="post-title"><a href="/post/two-authentications-systems-into-symfony/" class="post-link">Two Authentications Systems Into Symfony</a></h3>
-    <p class="post-meta">@ · Jul 17, 2018 · 4 min read</p>
-  </header>
-  
-  <p class="post-summary">Many times in your application you have a login system based on JWT Token. At a certain moment you need your application to be able to answer to a rest api request made by another application. So you can give the possibility to login with the JWT Token to it but it’s not safe. So you need to implement an api token authentication for your application but this means that your application has to manage both authenticators: JWT and Api Token.</p>
-  <footer class="post-footer">
-    <a class="read-more" href="/post/two-authentications-systems-into-symfony/">Read More →</a>
-  </footer>
-</article>
-
-      
-        <article class="post-entry">
-  <header class="post-header">
-    <h3 class="post-title"><a href="/post/symfony-4/" class="post-link">Symfony 4 Installation and new features</a></h3>
-    <p class="post-meta">@ · May 18, 2018 · 7 min read</p>
-  </header>
-  
-  <p class="post-summary">Symfony 4 is the newest version of the one of the most famous PHP frameworks. It has been released on the 30th of November 2017 and it’s having a great success! One of the biggest difference with the older versions is the presence of very small dependencies installed when you init your Symfony 4 project. Symfony 4 is so tiny that Silex project has been dismissed.
-How to Install Symfony 4 In order to create a new Symfony 4 application you need to have PHP 7.</p>
-  <footer class="post-footer">
-    <a class="read-more" href="/post/symfony-4/">Read More →</a>
-  </footer>
-</article>
-
-      
-        <article class="post-entry">
-  <header class="post-header">
-    <h3 class="post-title"><a href="/post/php7-2/" class="post-link">Better performances, high security, deprecated functions: here&#39;s  all the news about PHP 7.2</a></h3>
-    <p class="post-meta">@ · Mar 20, 2018 · 5 min read</p>
-  </header>
-  
-  <p class="post-summary">PHP 7.2 has many features about security, implementations and deprecated functions. In addition, it introduces a performance increase (already in version 7 it was done a great work): PHP 7.2 is 20% faster than version 7.0 and 10% faster than version 7.1.
-Here’s all the highlights offered by this new version.
-Type hinting argument Since PHP 5 it was possibile to specify the argument type passed to a function.</p>
-  <footer class="post-footer">
-    <a class="read-more" href="/post/php7-2/">Read More →</a>
-  </footer>
-</article>
-
-      
-    
     
   </section>
   <footer class="site-footer">
