@@ -24,6 +24,16 @@ You can contact me at my email address, alessandro.minoccheri@gmail.com or else 
     </item>
     
     <item>
+      <title>Symfony &#43; AWS Lambda Part1</title>
+      <link>/post/symfony-aws-lambda-part1/</link>
+      <pubDate>Thu, 31 Oct 2019 08:11:25 +0100</pubDate>
+      
+      <guid>/post/symfony-aws-lambda-part1/</guid>
+      <description>Symfony is one of the most used frameworks in the PHP world. Nowadays talking about serverless is common, so it&amp;rsquo;s very important to know how to use Symfony with this technology. In the following article, I have described how to deploy a Symfony application to AWS Lambda using Bref. This is the first part, the second part will be posted very soon! Stay tuned!
+Symfony AWS Lambda Part 1</description>
+    </item>
+    
+    <item>
       <title>Using Bitbucket Private Repository in Your Projects</title>
       <link>/post/bitbucket-private-repository-in-your-projects/</link>
       <pubDate>Tue, 02 Oct 2018 08:58:31 +0200</pubDate>

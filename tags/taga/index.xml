@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Taga on Alessandro Minoccheri</title>
+    <link>/tags/taga/</link>
+    <description>Recent content in Taga on Alessandro Minoccheri</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 31 Oct 2019 08:11:25 +0100</lastBuildDate>
+    
+	<atom:link href="/tags/taga/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Symfony &#43; AWS Lambda Part1</title>
+      <link>/post/symfony-aws-lambda-part1/</link>
+      <pubDate>Thu, 31 Oct 2019 08:11:25 +0100</pubDate>
+      
+      <guid>/post/symfony-aws-lambda-part1/</guid>
+      <description>Symfony is one of the most used frameworks in the PHP world. Nowadays talking about serverless is common, so it&amp;rsquo;s very important to know how to use Symfony with this technology. In the following article, I have described how to deploy a Symfony application to AWS Lambda using Bref. This is the first part, the second part will be posted very soon! Stay tuned!
+Symfony AWS Lambda Part 1</description>
+    </item>
+    
+  </channel>
+</rss>
