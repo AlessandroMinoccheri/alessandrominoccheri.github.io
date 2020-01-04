@@ -6,26 +6,53 @@
     <description>Recent content in Tags on Alessandro Minoccheri</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 31 Oct 2019 08:11:25 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jan 2020 14:30:39 +0100</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Taga</title>
-      <link>/tags/taga/</link>
-      <pubDate>Thu, 31 Oct 2019 08:11:25 +0100</pubDate>
+      <title>Aws</title>
+      <link>/tags/aws/</link>
+      <pubDate>Sat, 04 Jan 2020 14:30:39 +0100</pubDate>
       
-      <guid>/tags/taga/</guid>
+      <guid>/tags/aws/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Tagb</title>
-      <link>/tags/tagb/</link>
-      <pubDate>Thu, 31 Oct 2019 08:11:25 +0100</pubDate>
+      <title>Lambda</title>
+      <link>/tags/lambda/</link>
+      <pubDate>Sat, 04 Jan 2020 14:30:39 +0100</pubDate>
       
-      <guid>/tags/tagb/</guid>
+      <guid>/tags/lambda/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Php</title>
+      <link>/tags/php/</link>
+      <pubDate>Sat, 04 Jan 2020 14:30:39 +0100</pubDate>
+      
+      <guid>/tags/php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Serverless</title>
+      <link>/tags/serverless/</link>
+      <pubDate>Sat, 04 Jan 2020 14:30:39 +0100</pubDate>
+      
+      <guid>/tags/serverless/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Symfony</title>
+      <link>/tags/symfony/</link>
+      <pubDate>Sat, 04 Jan 2020 14:30:39 +0100</pubDate>
+      
+      <guid>/tags/symfony/</guid>
       <description></description>
     </item>
     

@@ -24,6 +24,16 @@ You can contact me at my email address, alessandro.minoccheri@gmail.com or else 
     </item>
     
     <item>
+      <title>Symfony &#43; Aws Lambda Part2</title>
+      <link>/post/symfony-aws-lambda-part2/</link>
+      <pubDate>Sat, 04 Jan 2020 14:30:39 +0100</pubDate>
+      
+      <guid>/post/symfony-aws-lambda-part2/</guid>
+      <description>In the previous article, I have explained a basic guideline to deploy your Symfony application into AWS Lambda. Now it&amp;rsquo;s time to understand deeply how does it work
+Symfony AWS Lambda Part 2</description>
+    </item>
+    
+    <item>
       <title>Symfony &#43; AWS Lambda Part1</title>
       <link>/post/symfony-aws-lambda-part1/</link>
       <pubDate>Thu, 31 Oct 2019 08:11:25 +0100</pubDate>
