@@ -16,7 +16,7 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="Symfony 4 is the newest version of the one of the most famous PHP frameworks. It has been released on the 30th of November 2017 and it&#39;s having a great success! One of the biggest difference with the older versions is the presence of very small dependencies installed when you init your Symfony 4 project. Symfony 4 is so tiny that Silex project has been dismissed.
+  <meta name="description" content="Symfony 4 is the newest version of the one of the most famous PHP frameworks. It has been released on the 30th of November 2017 and it&amp;rsquo;s having a great success! One of the biggest difference with the older versions is the presence of very small dependencies installed when you init your Symfony 4 project. Symfony 4 is so tiny that Silex project has been dismissed.
 How to Install Symfony 4 In order to create a new Symfony 4 application you need to have PHP 7." />
 
   
@@ -24,7 +24,7 @@ How to Install Symfony 4 In order to create a new Symfony 4 application you need
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@minompi" />
     <meta name="twitter:title" content="Symfony 4 Installation and new features" />
-    <meta name="twitter:description" content="Symfony 4 is the newest version of the one of the most famous PHP frameworks. It has been released on the 30th of November 2017 and it&#39;s having a great success! One of the biggest difference with the older versions is the presence of very small dependencies installed when you init your Symfony 4 project. Symfony 4 is so tiny that Silex project has been dismissed.
+    <meta name="twitter:description" content="Symfony 4 is the newest version of the one of the most famous PHP frameworks. It has been released on the 30th of November 2017 and it&amp;rsquo;s having a great success! One of the biggest difference with the older versions is the presence of very small dependencies installed when you init your Symfony 4 project. Symfony 4 is so tiny that Silex project has been dismissed.
 How to Install Symfony 4 In order to create a new Symfony 4 application you need to have PHP 7." />
     <meta name="twitter:image" content="/img/avatar.jpg" />
   
@@ -32,7 +32,7 @@ How to Install Symfony 4 In order to create a new Symfony 4 application you need
   
   <meta property="og:type" content="article" />
   <meta property="og:title" content="Symfony 4 Installation and new features" />
-  <meta property="og:description" content="Symfony 4 is the newest version of the one of the most famous PHP frameworks. It has been released on the 30th of November 2017 and it&#39;s having a great success! One of the biggest difference with the older versions is the presence of very small dependencies installed when you init your Symfony 4 project. Symfony 4 is so tiny that Silex project has been dismissed.
+  <meta property="og:description" content="Symfony 4 is the newest version of the one of the most famous PHP frameworks. It has been released on the 30th of November 2017 and it&amp;rsquo;s having a great success! One of the biggest difference with the older versions is the presence of very small dependencies installed when you init your Symfony 4 project. Symfony 4 is so tiny that Silex project has been dismissed.
 How to Install Symfony 4 In order to create a new Symfony 4 application you need to have PHP 7." />
   <meta property="og:url" content="/post/symfony-4/" />
   <meta property="og:image" content="/img/avatar.jpg" />
@@ -40,7 +40,7 @@ How to Install Symfony 4 In order to create a new Symfony 4 application you need
 
 
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.70.0" />
 
 
 <link rel="canonical" href="/post/symfony-4/" />
@@ -224,7 +224,7 @@ How to Install Symfony 4 In order to create a new Symfony 4 application you need
       <p class="post-meta">@ · May 18, 2018 · 7 min read</p>
     </header>
     <article class="post-content"><p><strong>Symfony 4</strong> is the newest version of the one of the most famous PHP frameworks.
-It has been released on the 30th of November 2017 and it's having a great success!
+It has been released on the 30th of November 2017 and it&rsquo;s having a great success!
 One of the biggest difference with the older versions is the presence of very small dependencies installed when you init your Symfony 4 project.
 Symfony 4 is so tiny that <a href="https://silex.symfony.com/">Silex</a> project has been dismissed.</p>
 <h2 id="how-to-install-symfony-4">How to Install Symfony 4</h2>
@@ -234,7 +234,7 @@ With <strong>Composer</strong> installed you can create the project launching th
 </code></pre><p>This is the command for traditional web applications that downloads a base skeleton of a Symfony project with a ready to start default configuration.
 If you are building microservices, console applications or APIs, consider using the much simpler skeleton project.</p>
 <pre><code>composer create-project symfony/skeleton my-project
-</code></pre><p>In this version there aren't bundles installed so it's smaller.</p>
+</code></pre><p>In this version there aren&rsquo;t bundles installed so it&rsquo;s smaller.</p>
 <h2 id="directory-structure">Directory Structure</h2>
 <p>Symfony 4 has changed a bit its directory structure according to other frameworks and community requests, so now the new directory structure is:</p>
 <p><img src="https://alessandrominoccheri.github.io/img/symfony_folder_strcuture.jpg" alt="Directory Structure Image"></p>
@@ -243,8 +243,8 @@ The application configuration, templates and translations, where you can find th
 <p><strong>bin/</strong>
 Executable files (e.g. bin/console).</p>
 <p><strong>src/</strong>
-The project's PHP code, where you have controllers, templates and entities directories.
-In this folder there isn't a main bundle because Symfony 4's idea is to have a single project instead of more packages in a project.</p>
+The project&rsquo;s PHP code, where you have controllers, templates and entities directories.
+In this folder there isn&rsquo;t a main bundle because Symfony 4&rsquo;s idea is to have a single project instead of more packages in a project.</p>
 <p><strong>tests/</strong>
 Automatic tests (e.g. Unit tests with PHPUnit or Behat or others).</p>
 <p><strong>var/</strong>
@@ -255,7 +255,7 @@ External libraries installed by composer.</p>
 The web root directory where are stored public and static files like images, stylesheets and JavaScript files, this folder is the old &ldquo;web&rdquo; folder.</p>
 <h2 id="environment-variables">Environment Variables</h2>
 <p>When designing your system, you may wish to have different variables that can be not the same as in other environments.
-In previous Symfony versions you put that variables into a file called <strong>parameters.yml</strong> and in parameters.yml.yourenv. Now that file doesn't exist (you can obviously change your code to use it but it's a little bit complex) and you need to write those variables in a file called .env in the project root.
+In previous Symfony versions you put that variables into a file called <strong>parameters.yml</strong> and in parameters.yml.yourenv. Now that file doesn&rsquo;t exist (you can obviously change your code to use it but it&rsquo;s a little bit complex) and you need to write those variables in a file called .env in the project root.
 Obviously you can have different .env files but it depends on how many environments you have into your application.
 Here is a simple <strong>.env</strong> file:</p>
 <pre><code>DB_USER=root
@@ -264,7 +264,7 @@ DB_PASS=pass
 <pre><code>DB_USER=root
 DB_PASS=${DB_USER}pass
 </code></pre><p>The component that reads those files is the Dotenv component that parses .env files to make environment variables stored in them accessible via <strong>getenv()</strong>, <strong>$_ENV</strong> or <strong>$_SERVER</strong>.
-If you don't already have it in your project you can launch this command to form your CLI to use it:</p>
+If you don&rsquo;t already have it in your project you can launch this command to form your CLI to use it:</p>
 <pre><code>composer require symfony/dotenv
 </code></pre><p>To get the value of an environment variable you can use this syntax inside your code:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$dbUser = getenv(&#39;DB_USER&#39;);
@@ -294,13 +294,13 @@ class Foo
     class: AppBundle\Services\Foo
     public: true
 </code></pre><p>So you need to specify only public as true. Imagine having plenty arguments to declare for many services, in this way you will gain spare time!
-Basically, services aren't public so you need to render it true into services.yml if you want also in this way:</p>
+Basically, services aren&rsquo;t public so you need to render it true into services.yml if you want also in this way:</p>
 <pre><code>services:
     _defaults:
         autowire: true
         autoconfigure: true
         public: true
-</code></pre><p>This is the default configuration of your services and as you can see it's under _defaults.
+</code></pre><p>This is the default configuration of your services and as you can see it&rsquo;s under _defaults.
 If you want to have different configuration for your service, for example a private service, you can write this:</p>
 <pre><code>services:
     _defaults:
@@ -313,20 +313,20 @@ If you want to have different configuration for your service, for example a priv
         public: false
 </code></pre><p>So the Autowire option indicates to Symfony to automatically inject dependencies in your services.
 Autoconfigure option indicates to Symfony to automatically register your services as commands, event subscribers, etc.</p>
-<p>Now also controllers are services so it's easy to make unit tests on it instead of using integration tests that are slower.
+<p>Now also controllers are services so it&rsquo;s easy to make unit tests on it instead of using integration tests that are slower.
 So now you can also inject services inside your controller like this:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">public function index(LoggerInterface $logger) 
 {
     $logger-&gt;info(&#39;This is a injected service!&#39;);
     //code
 }
-</code></pre></div><p>In this action you inject <strong>LoggerInterface</strong> directly and you don't need to instantiate it inside the action!</p>
+</code></pre></div><p>In this action you inject <strong>LoggerInterface</strong> directly and you don&rsquo;t need to instantiate it inside the action!</p>
 <h2 id="flex-and-recipes">Flex and Recipes</h2>
-<p>Symfony Flex is a Composer plugin and it's called when you run require, update, and remove composer commands.
+<p>Symfony Flex is a Composer plugin and it&rsquo;s called when you run require, update, and remove composer commands.
 When you run those flex search commands inside <strong>Symfony Flex</strong>, the server will take it, install it and configure it for you if the package is on there.
-The power of Flex is that you don't have to watch all the libraries&rsquo; readme files to configure your package since there is a recipe that does it for you.
-You don't need to add your new bundle into AppKernel.php because flex already did it when you install it.
-If your package doesn't exist, it fallbacks on Composer standard behaviour.</p>
+The power of Flex is that you don&rsquo;t have to watch all the libraries&rsquo; readme files to configure your package since there is a recipe that does it for you.
+You don&rsquo;t need to add your new bundle into AppKernel.php because flex already did it when you install it.
+If your package doesn&rsquo;t exist, it fallbacks on Composer standard behaviour.</p>
 <p>Flex keeps track of the recipes it installed in a <strong>symfony.lock</strong> file, which must be committed to your code repository.
 Recipes are stored in two different github repositories:</p>
 <ul>
@@ -350,7 +350,7 @@ In order to install the component, you need to launch from your console:</p>
 <h3 id="how-does-it-work">How does it work?</h3>
 <p>Sender serializes and sends a message to something. For example this something can be a message broker or a third party API.
 The bus dispatches the message. The behaviour of the bus is in its ordered middleware stack. The component comes with a set of middleware that you can use.
-When using the message bus with <strong>Symfony's FrameworkBundle</strong>, the following middleware are configured for you:</p>
+When using the message bus with <strong>Symfony&rsquo;s FrameworkBundle</strong>, the following middleware are configured for you:</p>
 <p><strong>LoggingMiddleware</strong> (logs the processing of your messages)</p>
 <p><strong>SendMessageMiddleware</strong> (enables asynchronous processing)</p>
 <p><strong>HandleMessageMiddleware</strong> (calls the registered handle)</p>

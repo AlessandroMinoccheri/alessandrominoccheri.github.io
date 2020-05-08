@@ -8,16 +8,6 @@
   </url>
   
   <url>
-    <loc>/presentations/</loc>
-    <lastmod>2020-05-08T22:17:36+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2020-05-08T22:17:36+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/aws/</loc>
     <lastmod>2020-01-04T14:30:39+01:00</lastmod>
   </url>
@@ -78,8 +68,18 @@
   </url>
   
   <url>
+    <loc>/</loc>
+    <lastmod>2018-03-21T14:13:16+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/php7-2/</loc>
     <lastmod>2018-03-20T15:09:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/presentations/</loc>
+    <lastmod>2010-05-08T22:17:36+02:00</lastmod>
   </url>
   
   <url>
