@@ -16,28 +16,28 @@
 
   
   <meta name="author" content="" />
-  <meta name="description" content="Many times in your application you have a login system based on JWT Token. At a certain moment you need your application to be able to answer to a rest api request made by another application. So you can give the possibility to login with the JWT Token to it but it&amp;rsquo;s not safe. So you need to implement an api token authentication for your application but this means that your application has to manage both authenticators: JWT and Api Token." />
+  <meta name="description" content="Many times in your application you have a login system based on JWT Token. At a certain moment you need your application to be able to answer to a rest api request made by another application. So you can give the possibility to login with the JWT Token to it but it&#39;s not safe. So you need to implement an api token authentication for your application but this means that your application has to manage both authenticators: JWT and Api Token." />
 
   
   
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@minompi" />
     <meta name="twitter:title" content="Two Authentications Systems Into Symfony" />
-    <meta name="twitter:description" content="Many times in your application you have a login system based on JWT Token. At a certain moment you need your application to be able to answer to a rest api request made by another application. So you can give the possibility to login with the JWT Token to it but it&amp;rsquo;s not safe. So you need to implement an api token authentication for your application but this means that your application has to manage both authenticators: JWT and Api Token." />
+    <meta name="twitter:description" content="Many times in your application you have a login system based on JWT Token. At a certain moment you need your application to be able to answer to a rest api request made by another application. So you can give the possibility to login with the JWT Token to it but it&#39;s not safe. So you need to implement an api token authentication for your application but this means that your application has to manage both authenticators: JWT and Api Token." />
     <meta name="twitter:image" content="/img/avatar.jpg" />
   
 
   
   <meta property="og:type" content="article" />
   <meta property="og:title" content="Two Authentications Systems Into Symfony" />
-  <meta property="og:description" content="Many times in your application you have a login system based on JWT Token. At a certain moment you need your application to be able to answer to a rest api request made by another application. So you can give the possibility to login with the JWT Token to it but it&amp;rsquo;s not safe. So you need to implement an api token authentication for your application but this means that your application has to manage both authenticators: JWT and Api Token." />
+  <meta property="og:description" content="Many times in your application you have a login system based on JWT Token. At a certain moment you need your application to be able to answer to a rest api request made by another application. So you can give the possibility to login with the JWT Token to it but it&#39;s not safe. So you need to implement an api token authentication for your application but this means that your application has to manage both authenticators: JWT and Api Token." />
   <meta property="og:url" content="/post/two-authentications-systems-into-symfony/" />
   <meta property="og:image" content="/img/avatar.jpg" />
 
 
 
 
-<meta name="generator" content="Hugo 0.54.0" />
+<meta name="generator" content="Hugo 0.62.2" />
 
 
 <link rel="canonical" href="/post/two-authentications-systems-into-symfony/" />
@@ -214,27 +214,19 @@
       <p class="post-meta">@ · Jul 17, 2018 · 4 min read</p>
     </header>
     <article class="post-content"><p>Many times in your application you have a login system based on <strong>JWT Token</strong>.
-At a certain moment you need your application to be able to answer to a rest api request made by another application. So you can give the possibility to login with the JWT Token to it but it&rsquo;s not safe.
+At a certain moment you need your application to be able to answer to a rest api request made by another application. So you can give the possibility to login with the JWT Token to it but it's not safe.
 So you need to implement an api token authentication for your application but this means that your application has to <strong>manage both authenticators</strong>: JWT and <strong>Api Token</strong>.</p>
-
-<p><img src="https://alessandrominoccheri.github.io/img/symfony-authentication.jpg" alt="Directory Structure Image" /></p>
-
+<p><img src="https://alessandrominoccheri.github.io/img/symfony-authentication.jpg" alt="Directory Structure Image"></p>
 <p>Well, how can you use both authentication system?</p>
-
 <p>First step is to make the first authenticator work as if it were the only one.</p>
-
 <p><strong>security.yml</strong></p>
-
 <pre><code>rest_api:
     pattern:   ^/api/
     stateless: true
     guard:
         authenticators:
            - lexik_jwt_authentication.jwt_token_authenticator
-</code></pre>
-
-<p>After that start to implement another authenticator into security.yml file like this:</p>
-
+</code></pre><p>After that start to implement another authenticator into security.yml file like this:</p>
 <pre><code>rest_api:
     pattern:   ^/api/
     stateless: true
@@ -243,23 +235,16 @@ So you need to implement an api token authentication for your application but th
            - lexik_jwt_authentication.jwt_token_authenticator
            - AppBundle\Security\ApiKeyAuthenticator
         entry_point: lexik_jwt_authentication.jwt_token_authenticator
-</code></pre>
-
-<p>In this configuration you have specified a two different authenticators system and a entry point.
+</code></pre><p>In this configuration you have specified a two different authenticators system and a entry point.
 Note that the entry point is mandatory! Entry point highlights the principle authenticator system.</p>
-
 <p>Now you need to add the field apiKey into your user entity, something like this:</p>
-
 <pre><code>/**
  * @var string
  *
  * @ORM\Column(name=&quot;api_key&quot;, type=&quot;string&quot;, length=255, nullable=false, unique=true)
  */
 private $apiKey;
-</code></pre>
-
-<p>After that you need to create your custom ApiKeyAuthenticator, for example:</p>
-
+</code></pre><p>After that you need to create your custom ApiKeyAuthenticator, for example:</p>
 <pre><code>namespace AppBundle\Security;
 
 use AppBundle\Entity\PvpUser;
@@ -347,57 +332,43 @@ class ApiKeyAuthenticator implements AuthenticatorInterface
         return false;
     }
 }
-</code></pre>
-
-<p>Explanation of functions</p>
-
+</code></pre><p>Explanation of functions</p>
 <p><strong>start</strong></p>
-
 <pre><code>This is called when an anonymous request accesses a resource that requires authentication. The job of this method is to return some response that &quot;helps&quot; the user start the authentication process.
  It must return a Response object
 </code></pre>
-
 <p><strong>supports</strong>
-    This function indicates if the authenticator supports the given Request
-    It must return a boolean value</p>
-
+This function indicates if the authenticator supports the given Request
+It must return a boolean value</p>
 <p><strong>getCredentials</strong>
-    This function gets the authentication credentials from the request and returns them into an array or variable, it depends on your system</p>
-
+This function gets the authentication credentials from the request and returns them into an array or variable, it depends on your system</p>
 <p><strong>getUser</strong>
-    Returns a UserInterface object based on the credentials.
-    It must return a UserInterface object or null.</p>
-
+Returns a UserInterface object based on the credentials.
+It must return a UserInterface object or null.</p>
 <p><strong>checkCredentials</strong>
-    Returns true if the credentials are valid.
-    It must return a boolean value</p>
-
+Returns true if the credentials are valid.
+It must return a boolean value</p>
 <p><strong>createAuthenticatedToken</strong>
-    Creates an authenticated token for the given user
-    It must return a GuardTokenInterface object</p>
-
+Creates an authenticated token for the given user
+It must return a GuardTokenInterface object</p>
 <p><strong>onAuthenticationFailure</strong>
-    This function is called when authentication has been executed, but has failed (e.g. wrong apikey).
-    It must return a Response object or null</p>
-
+This function is called when authentication has been executed, but has failed (e.g. wrong apikey).
+It must return a Response object or null</p>
 <p><strong>onAuthenticationSuccess</strong>
-    This function is called when authentication has been executed successfully.
-    It must return a Response object or null</p>
-
+This function is called when authentication has been executed successfully.
+It must return a Response object or null</p>
 <p><strong>supportsRememberMe</strong>
-    This function indicates if authentication supports the remember me function
-    It must return a boolean value</p>
-
+This function indicates if authentication supports the remember me function
+It must return a boolean value</p>
 <p>In this code we check in every request if there is the key apikey into the headers.
 If that header exists the authenticator tries to load an user by the apikey stored into the database. Then if the user is found, checks if it is allowed to access the resource requested.</p>
-
 <p>In this way you can use <strong>both authenticator</strong> for all routes.
 But if you want to close only some routes you can specify many rules into your <strong>security.yml</strong></p>
 </article>
     <footer class="post-footer">
       
       <p class="post-copyright">
-        This post was published <strong>536</strong> days ago, content in the post may be inaccurate, even wrong now, please take risk yourself.
+        This post was published <strong>661</strong> days ago, content in the post may be inaccurate, even wrong now, please take risk yourself.
       </p>
     </footer>
     

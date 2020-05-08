@@ -17,8 +17,9 @@
   
   <meta name="author" content="" />
   <meta name="description" content="PHP 7.2 has many features about security, implementations and deprecated functions. In addition, it introduces a performance increase (already in version 7 it was done a great work): PHP 7.2 is 20% faster than version 7.0 and 10% faster than version 7.1.
-Here&amp;rsquo;s all the highlights offered by this new version.
-Type hinting argument Since PHP 5 it was possibile to specify the argument type passed to a function." />
+Here&#39;s all the highlights offered by this new version.
+Type hinting argument Since PHP 5 it was possibile to specify the argument type passed to a function.
+Example:" />
 
   
   
@@ -26,8 +27,9 @@ Type hinting argument Since PHP 5 it was possibile to specify the argument type 
     <meta name="twitter:site" content="@minompi" />
     <meta name="twitter:title" content="Better performances, high security, deprecated functions: here&#39;s  all the news about PHP 7.2" />
     <meta name="twitter:description" content="PHP 7.2 has many features about security, implementations and deprecated functions. In addition, it introduces a performance increase (already in version 7 it was done a great work): PHP 7.2 is 20% faster than version 7.0 and 10% faster than version 7.1.
-Here&amp;rsquo;s all the highlights offered by this new version.
-Type hinting argument Since PHP 5 it was possibile to specify the argument type passed to a function." />
+Here&#39;s all the highlights offered by this new version.
+Type hinting argument Since PHP 5 it was possibile to specify the argument type passed to a function.
+Example:" />
     <meta name="twitter:image" content="/img/avatar.jpg" />
   
 
@@ -35,15 +37,16 @@ Type hinting argument Since PHP 5 it was possibile to specify the argument type 
   <meta property="og:type" content="article" />
   <meta property="og:title" content="Better performances, high security, deprecated functions: here&#39;s  all the news about PHP 7.2" />
   <meta property="og:description" content="PHP 7.2 has many features about security, implementations and deprecated functions. In addition, it introduces a performance increase (already in version 7 it was done a great work): PHP 7.2 is 20% faster than version 7.0 and 10% faster than version 7.1.
-Here&amp;rsquo;s all the highlights offered by this new version.
-Type hinting argument Since PHP 5 it was possibile to specify the argument type passed to a function." />
+Here&#39;s all the highlights offered by this new version.
+Type hinting argument Since PHP 5 it was possibile to specify the argument type passed to a function.
+Example:" />
   <meta property="og:url" content="/post/php7-2/" />
   <meta property="og:image" content="/img/avatar.jpg" />
 
 
 
 
-<meta name="generator" content="Hugo 0.54.0" />
+<meta name="generator" content="Hugo 0.62.2" />
 
 
 <link rel="canonical" href="/post/php7-2/" />
@@ -219,21 +222,14 @@ Type hinting argument Since PHP 5 it was possibile to specify the argument type 
       <h1 class="post-title">Better performances, high security, deprecated functions: here&#39;s  all the news about PHP 7.2</h1>
       <p class="post-meta">@ · Mar 20, 2018 · 5 min read</p>
     </header>
-    <article class="post-content">
-
-<p><strong>PHP 7.2</strong> has many features about security, implementations and deprecated functions.
+    <article class="post-content"><p><strong>PHP 7.2</strong> has many features about security, implementations and deprecated functions.
 In addition, it introduces a performance increase (already in version 7 it was done a great work): PHP 7.2 is 20% faster than version 7.0 and 10% faster than version 7.1.</p>
-
-<p>Here&rsquo;s all the <strong>highlights</strong> offered by this new version.</p>
-
+<p>Here's all the <strong>highlights</strong> offered by this new version.</p>
 <h2 id="type-hinting-argument">Type hinting argument</h2>
-
 <p>Since PHP 5 it was possibile to specify the argument type passed to a function.</p>
-
 <p>Example:</p>
-
-<pre><code class="language-php">class SimpleClass {
-    public $foo = 'bar';
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">class SimpleClass {
+    public $foo = &#39;bar&#39;;
 }
 
 $simpleClass = new SimpleClass;
@@ -243,23 +239,18 @@ function test(SimpleClass $simpleClass){
 }
 
 echo test($simpleClass);
-</code></pre>
-
-<p>Since PHP 7.1 if it was passed a non SimpleClass type value to the function it generated a 500 error.</p>
-
-<p>With PHP 7.2 the <strong>type hinting argument</strong> can be declared as object, which means that it&rsquo;s a generic object.</p>
-
+</code></pre></div><p>Since PHP 7.1 if it was passed a non SimpleClass type value to the function it generated a 500 error.</p>
+<p>With PHP 7.2 the <strong>type hinting argument</strong> can be declared as object, which means that it's a generic object.</p>
 <p>Example:</p>
-
-<pre><code class="language-php">class SimpleClass {
-    public $foo = 'bar';
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">class SimpleClass {
+    public $foo = &#39;bar&#39;;
 }
 
 class FirstClass extends SimpleClass {
-    public $foo = 'baz';
+    public $foo = &#39;baz&#39;;
 }
 class SecondClass extends SimpleClass{
-    public $foo = 'foobar';
+    public $foo = &#39;foobar&#39;;
 }
 
 $firstClass = new FirstClass;
@@ -274,32 +265,20 @@ echo test($firstClass);
 
 echo test($secondClass);
 
-</code></pre>
-
-<p>In this example the code runs declaring the argument object type and then a generic object so it doesn&rsquo;t generate a 500 error.
+</code></pre></div><p>In this example the code runs declaring the argument object type and then a generic object so it doesn't generate a 500 error.
 Furthermore, this features permits to have a type &ldquo;variance&rdquo; implemented in the subclass for example.</p>
-
 <p>Object becomes a key value from version 7.2, so be sure to not use it for class names, interfaces or traits.</p>
-
 <h2 id="type-hinting-return-value">Type hinting return value</h2>
-
 <p>Since version 7.2 it is possible to declare <strong>type hint return value</strong> as object.</p>
-
 <p>Example:</p>
-
-<pre><code class="language-php">function test($arg) :object
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">function test($arg) :object
 {
     return new Foo($arg);
 }
-</code></pre>
-
-<h2 id="abstract-methods-and-re-writable-interfaces">Abstract methods and re-writable interfaces</h2>
-
+</code></pre></div><h2 id="abstract-methods-and-re-writable-interfaces">Abstract methods and re-writable interfaces</h2>
 <p>PHP 7.2 allows to <strong>overwrite abstract methods and interfaces</strong> which is to omit the declaration type of a parameter in an abstract method extended by the parent class.</p>
-
 <p>Example:</p>
-
-<pre><code class="language-php">abstract class foo
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">abstract class foo
 {
     abstract function baz(string $yourVar);
 }
@@ -308,11 +287,8 @@ abstract class bar extends foo
 {
     abstract function baz($yourVar) : int;
 }
-</code></pre>
-
-<p>The same functionality also applies to interfaces, for example:</p>
-
-<pre><code class="language-php">interface foo
+</code></pre></div><p>The same functionality also applies to interfaces, for example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">interface foo
 {
     public function test(string $yourVar);
 }
@@ -324,119 +300,73 @@ class bar implements foo
         //your code
     }
 }
-</code></pre>
-
-<p>This new feature allows to update parent classes without updating all their subclasses.</p>
-
+</code></pre></div><p>This new feature allows to update parent classes without updating all their subclasses.</p>
 <p>Probably this is a marginal improvement  (it will never be used so frequently).</p>
-
-<h2 id="comma-into-syntax-at-the-end-of-use-statement-s-lists">Comma into syntax at the end of use statement&rsquo;s lists</h2>
-
-<p>Comma at the end of the last array element it&rsquo;s valid in the PHP syntax, and sometimes it&rsquo;s encouraged to add easily new elements and avoid analysis errors by missing comma.</p>
-
+<h2 id="comma-into-syntax-at-the-end-of-use-statements-lists">Comma into syntax at the end of use statement's lists</h2>
+<p>Comma at the end of the last array element it's valid in the PHP syntax, and sometimes it's encouraged to add easily new elements and avoid analysis errors by missing comma.</p>
 <p>Since PHP 7.2 version it is possible to use commas even for the &ldquo;use&rdquo; inside classes.</p>
-
 <p>Example:</p>
-
-<pre><code class="language-php">use Foo\Bar\{
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">use Foo\Bar\{
     Foo,
     Bar,
     Baz,
 };
-</code></pre>
-
-<h2 id="argon2-in-password-s-hash">Argon2 in password&rsquo;s hash</h2>
-
+</code></pre></div><h2 id="argon2-in-passwords-hash">Argon2 in password's hash</h2>
 <p>Argon2 is a powerful hashing algorithm that was selected as the 2015 Password Hashing Competition winner, and PHP 7.2 introduces as a secure substitute for the Bcrypt algorithm.</p>
-
-<p>The new PHP version introduces the PASSWORD<em>ARGON2I constant, which now can be used in password</em> * function, following this syntax:</p>
-
-<pre><code class="language-php">password_hash('secretpassword', PASSWORD_ARGON2I);
-</code></pre>
-
-<p>Despite Bcrypt, which requires only one factor, Argon2 considers three different factors:</p>
-
+<p>The new PHP version introduces the PASSWORD_ARGON2I constant, which now can be used in password_ * function, following this syntax:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">password_hash(&#39;secretpassword&#39;, PASSWORD_ARGON2I);
+</code></pre></div><p>Despite Bcrypt, which requires only one factor, Argon2 considers three different factors:</p>
 <ul>
-<li>A memory cost that defines Kib number to use during hashing (standard values are 1 &lt;&lt; 10 or 1024 KiB or 1 MiB);</li>
+<li>A memory cost that defines Kib number to use during hashing (standard values are 1 &laquo; 10 or 1024 KiB or 1 MiB);</li>
 <li>A time cost that defines the number of interactions of the hashing algorithm (standard value is 2);</li>
 <li>A parallelism factor, that sets the parallel thread number which will be used during hashing (standard value is 2);</li>
 </ul>
-
-<p>Three new costants define standard cost&rsquo;s factors:</p>
-
+<p>Three new costants define standard cost's factors:</p>
 <pre><code>1. PASSWORD_ARGON2_DEFAULT_MEMORY_COST
 
 2. PASSWORD_ARGON2_DEFAULT_TIME_COST
 
 3. PASSWORD_ARGON2_DEFAULT_THREADS
 </code></pre>
-
 <p>Example:</p>
-
-<pre><code class="language-php">$options = ['memory_cost' =&gt; 1&lt;&lt;11, 'time_cost' =&gt; 4, 'threads' =&gt; 2];
-password_hash('secretpassword', PASSWORD_ARGON2I, $options);
-</code></pre>
-
-<h2 id="libsodium-as-part-of-the-php-core">Libsodium as part of the PHP Core</h2>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$options = [&#39;memory_cost&#39; =&gt; 1<span style="color:#960050;background-color:#1e0010">&lt;</span>&lt;<span style="color:#f92672">11</span><span style="color:#960050;background-color:#1e0010">,</span> <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">time_cost</span><span style="color:#960050;background-color:#1e0010">&#39;</span> <span style="color:#960050;background-color:#1e0010">=</span>&gt; 4, &#39;threads&#39; =&gt; 2];
+password_hash(&#39;secretpassword&#39;, PASSWORD_ARGON2I, $options);
+</code></pre></div><h2 id="libsodium-as-part-of-the-php-core">Libsodium as part of the PHP Core</h2>
 <p>Since version 7.2, PHP includes the <strong>Sodium library</strong> in its core. Libsodium is a cross-platform library and cross-languages for encrypting, decrypting, signatures, password hashing and much more.
 The library was previously available by PECL.
 PHP 7.2 is the first programming language that adds modern encrypting in its libraries.</p>
-
 <h2 id="count-scalar-values">Count scalar values</h2>
-
 <p>Did you know that it is possible to count scalar values? In reality this is insignificant , as the function count() returns only 1 for scalars.</p>
-
 <p>Example:</p>
-
-<pre><code class="language-php">var_dump(count(null)); // int(0)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">var_dump(count(null)); // int(0)
 var_dump(count(0)); // int(1)
 var_dump(count(4)); // int(1)
-var_dump(count('4')); // int(1)
-</code></pre>
-
-<p>Since PHP 7.2, it will show a message:</p>
-
+var_dump(count(&#39;4&#39;)); // int(1)
+</code></pre></div><p>Since PHP 7.2, it will show a message:</p>
 <pre><code>Warning: count(): The parameter must be an array or an object that implements Countable into / in / 4aIl2 on line 3.
-</code></pre>
-
-<h2 id="new-features">New features</h2>
-
+</code></pre><h2 id="new-features">New features</h2>
 <p>PHP 7.2 introduces some new features which can be very useful: ftp_append(), hash_hmac_algos(), imagesetclip(), imagegetclip(), imageopenpolygon(), imageresolution(), imagecreatefrombmp(), imagebmp().</p>
-
 <h2 id="deprecated-functions">Deprecated functions</h2>
-
 <p>The <strong>assert()</strong> function verifies data assertion and takes appropriate actions if the result is FALSE.
-Using assert() with a string argument it&rsquo;s now deprecated because it opens a RCE vulnerability.</p>
-
+Using assert() with a string argument it's now deprecated because it opens a RCE vulnerability.</p>
 <p>The <strong>__autoload</strong> function has been substituted by spl_autoload_register in PHP 5.1.
-Now it&rsquo;s generated a deprecation message during compilation when it&rsquo;s revealed.</p>
-
+Now it's generated a deprecation message during compilation when it's revealed.</p>
 <p>The <strong>$php_errormsg</strong> variable is created in the local scope when a non-fatal error is thrown. Since PHP 7.2 error_get_last and error_clear_last should be used instead.</p>
-
 <p><strong>create_function()</strong> allows to create a function with a generated function name, an argument list and the code body passed as arguments. Because of security problems and inadequate performances, it has been signed as deprecated (using enclosure is otherwise suggested).</p>
-
 <p><strong>each()</strong> is used to iterate on an array similar to foreach() that is 10 times faster.</p>
-
 <p><strong>$errcontext</strong> is an array that contains local existing variables at the error generation moment.</p>
-
-<p><strong>gmp_random()</strong>  is considered to be dependent on a platform and it will be deprecated. It&rsquo;s otherwise suggested to use gmp_random_bits () and gmp_random_rage ().</p>
-
+<p><strong>gmp_random()</strong>  is considered to be dependent on a platform and it will be deprecated. It's otherwise suggested to use gmp_random_bits () and gmp_random_rage ().</p>
 <p>For <strong>mbstring.func_overload</strong>, the ini setting inserted into a default value which differs from zero has been signed as deprecated.</p>
-
-<p><strong>parse_str()</strong> analyzes a query string in an array if a second argument is passed or if the local symbol table isn&rsquo;t used. Because the dynamical variables setting of the function isn&rsquo;t encouraged for security reasons, the use of parse_str() without a second argument will generate a deprecation advice.</p>
-
+<p><strong>parse_str()</strong> analyzes a query string in an array if a second argument is passed or if the local symbol table isn't used. Because the dynamical variables setting of the function isn't encouraged for security reasons, the use of parse_str() without a second argument will generate a deprecation advice.</p>
 <p><strong>(unset)cast</strong> is an expression that returns always null and is considered not useful.</p>
-
 <p>For further information contact me or follow  me on:</p>
-
 <p><a href="https://twitter.com/minompi">Twitter</a>
 <a href="https://github.com/AlessandroMinoccheri">GitHub</a></p>
 </article>
     <footer class="post-footer">
       
       <p class="post-copyright">
-        This post was published <strong>654</strong> days ago, content in the post may be inaccurate, even wrong now, please take risk yourself.
+        This post was published <strong>780</strong> days ago, content in the post may be inaccurate, even wrong now, please take risk yourself.
       </p>
     </footer>
     

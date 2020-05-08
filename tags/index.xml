@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Alessandro Minoccheri</title>
@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Aws</title>
+      <title>aws</title>
       <link>/tags/aws/</link>
       <pubDate>Sat, 04 Jan 2020 14:30:39 +0100</pubDate>
       
@@ -21,7 +21,7 @@
     </item>
     
     <item>
-      <title>Lambda</title>
+      <title>lambda</title>
       <link>/tags/lambda/</link>
       <pubDate>Sat, 04 Jan 2020 14:30:39 +0100</pubDate>
       
@@ -30,7 +30,7 @@
     </item>
     
     <item>
-      <title>Php</title>
+      <title>php</title>
       <link>/tags/php/</link>
       <pubDate>Sat, 04 Jan 2020 14:30:39 +0100</pubDate>
       
@@ -39,7 +39,7 @@
     </item>
     
     <item>
-      <title>Serverless</title>
+      <title>serverless</title>
       <link>/tags/serverless/</link>
       <pubDate>Sat, 04 Jan 2020 14:30:39 +0100</pubDate>
       
@@ -48,7 +48,7 @@
     </item>
     
     <item>
-      <title>Symfony</title>
+      <title>symfony</title>
       <link>/tags/symfony/</link>
       <pubDate>Sat, 04 Jan 2020 14:30:39 +0100</pubDate>
       
