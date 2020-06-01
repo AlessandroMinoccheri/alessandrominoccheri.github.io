@@ -3,25 +3,13 @@
   <channel>
     <title>Alessandro Minoccheri</title>
     <link>/</link>
-    <description>Recent content on Alessandro Minoccheri</description>
+    <description>Alessandro Minoccheri</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Mar 2018 14:13:16 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jan 2020 14:30:39 +0100</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>About Me</title>
-      <link>/about/</link>
-      <pubDate>Wed, 21 Mar 2018 14:13:16 +0100</pubDate>
-      
-      <guid>/about/</guid>
-      <description>Hi! My name&amp;rsquo;s Alessandro Minoccheri and I&amp;rsquo;m a software developer for Flowing living near Ravenna, Italy.
-I typically work with backend PHP and Node.js applications and I love to contribute to open-source PHP projects.
-I also love to contribute to Stack Overflow where my reputation is growing daily (actually near 30.000)!
-You can contact me at my email address, alessandro.minoccheri@gmail.com or else you can find me on Twitter or GitHub.</description>
-    </item>
     
     <item>
       <title>Symfony &#43; Aws Lambda Part2</title>
@@ -29,8 +17,10 @@ You can contact me at my email address, alessandro.minoccheri@gmail.com or else 
       <pubDate>Sat, 04 Jan 2020 14:30:39 +0100</pubDate>
       
       <guid>/post/symfony-aws-lambda-part2/</guid>
-      <description>In the previous article, I have explained a basic guideline to deploy your Symfony application into AWS Lambda. Now it&amp;rsquo;s time to understand deeply how does it work
-Symfony AWS Lambda Part 2</description>
+      <description>&lt;p&gt;In the &lt;a href=&#34;https://medium.com/flowingis/deploy-a-symfony-application-with-aws-lambda-quick-guide-65430c0edda5&#34;&gt;previous article&lt;/a&gt;,  I have explained a basic guideline to deploy your Symfony application into AWS Lambda.
+Now it&amp;rsquo;s time to understand deeply how does it work&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://medium.com/flowingis/deploy-a-symfony-application-with-aws-lambda-in-depth-analysis-on-advanced-use-3ad271049b93&#34;&gt;Symfony AWS Lambda Part 2&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -39,8 +29,22 @@ Symfony AWS Lambda Part 2</description>
       <pubDate>Thu, 31 Oct 2019 08:11:25 +0100</pubDate>
       
       <guid>/post/symfony-aws-lambda-part1/</guid>
-      <description>Symfony is one of the most used frameworks in the PHP world. Nowadays talking about serverless is common, so it&amp;rsquo;s very important to know how to use Symfony with this technology. In the following article, I have described how to deploy a Symfony application to AWS Lambda using Bref. This is the first part, the second part will be posted very soon! Stay tuned!
-Symfony AWS Lambda Part 1</description>
+      <description>&lt;p&gt;Symfony is one of the most used frameworks in the PHP world.
+Nowadays talking about serverless is common, so it&amp;rsquo;s very important to know how to use Symfony with this technology.
+In the following article, I have described how to deploy a Symfony application to AWS Lambda using Bref.
+This is the first part, the second part will be posted very soon!
+Stay tuned!&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://medium.com/flowingis/deploy-a-symfony-application-with-aws-lambda-quick-guide-65430c0edda5&#34;&gt;Symfony AWS Lambda Part 1&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/archive/</link>
+      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/archive/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -49,8 +53,25 @@ Symfony AWS Lambda Part 1</description>
       <pubDate>Tue, 02 Oct 2018 08:58:31 +0200</pubDate>
       
       <guid>/post/bitbucket-private-repository-in-your-projects/</guid>
-      <description>Many times you may like to use your personal private library in another project. For example, you may have many private projects that share a common library that can&amp;rsquo;t be open source for your business. You can use Packagist and pay to have a private repository or you can use Bitbucket with its FREE private repositories.
-To include your private Bitbucket repository via Composer you need to add this lines into your composer.</description>
+      <description>&lt;p&gt;Many times you may like to use your personal private library in another project.
+For example, you may have many private projects that share a common library that can&amp;rsquo;t be open source for your business.
+You can use Packagist and pay to have a private repository or you can use Bitbucket with its FREE private repositories.&lt;/p&gt;
+&lt;p&gt;To include your private Bitbucket repository via Composer you need to add this lines into your composer.json:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;quot;repositories&amp;quot;:[
+     {
+         &amp;quot;type&amp;quot;: &amp;quot;vcs&amp;quot;,
+         &amp;quot;url&amp;quot; : &amp;quot;git@bitbucket.org:yourName/yourRepository.git&amp;quot;
+     }
+ ]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;VCS stands for version control system. This includes versioning systems like git, svn, fossil or hg. Composer has a repository type for installing packages from these systems.&lt;/p&gt;
+&lt;p&gt;If you launch composer install now, you have to put a Consumer key into your CLI (command line interface).
+This isn&amp;rsquo;t a problem but if you have continuous integration, or your deploy system launches composer install the command, you must have an automatic system able to insert the consumer key or some magic script to manage it.&lt;/p&gt;
+&lt;p&gt;So, to avoid this problem you need to open your main repository, from Bitbucket for example, create an ssh key and copy the public key.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://alessandrominoccheri.github.io/img/generate-ssh-key.jpg&#34; alt=&#34;Directory Structure Image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;After that you need to open your private library from Bitbucket, add an access ssh key and paste the public key created previously.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://alessandrominoccheri.github.io/img/add-ssh-key.jpg&#34; alt=&#34;Directory Structure Image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Now if you launch composer install any request comes up into your CLI and you can have a perfect automatic deployment.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -59,7 +80,158 @@ To include your private Bitbucket repository via Composer you need to add this l
       <pubDate>Tue, 17 Jul 2018 15:43:08 +0200</pubDate>
       
       <guid>/post/two-authentications-systems-into-symfony/</guid>
-      <description>Many times in your application you have a login system based on JWT Token. At a certain moment you need your application to be able to answer to a rest api request made by another application. So you can give the possibility to login with the JWT Token to it but it&amp;rsquo;s not safe. So you need to implement an api token authentication for your application but this means that your application has to manage both authenticators: JWT and Api Token.</description>
+      <description>&lt;p&gt;Many times in your application you have a login system based on &lt;strong&gt;JWT Token&lt;/strong&gt;.
+At a certain moment you need your application to be able to answer to a rest api request made by another application. So you can give the possibility to login with the JWT Token to it but it&amp;rsquo;s not safe.
+So you need to implement an api token authentication for your application but this means that your application has to &lt;strong&gt;manage both authenticators&lt;/strong&gt;: JWT and &lt;strong&gt;Api Token&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://alessandrominoccheri.github.io/img/symfony-authentication.jpg&#34; alt=&#34;Directory Structure Image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Well, how can you use both authentication system?&lt;/p&gt;
+&lt;p&gt;First step is to make the first authenticator work as if it were the only one.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;security.yml&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;rest_api:
+    pattern:   ^/api/
+    stateless: true
+    guard:
+        authenticators:
+           - lexik_jwt_authentication.jwt_token_authenticator
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;After that start to implement another authenticator into security.yml file like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;rest_api:
+    pattern:   ^/api/
+    stateless: true
+    guard:
+        authenticators:
+           - lexik_jwt_authentication.jwt_token_authenticator
+           - AppBundle\Security\ApiKeyAuthenticator
+        entry_point: lexik_jwt_authentication.jwt_token_authenticator
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In this configuration you have specified a two different authenticators system and a entry point.
+Note that the entry point is mandatory! Entry point highlights the principle authenticator system.&lt;/p&gt;
+&lt;p&gt;Now you need to add the field apiKey into your user entity, something like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/**
+ * @var string
+ *
+ * @ORM\Column(name=&amp;quot;api_key&amp;quot;, type=&amp;quot;string&amp;quot;, length=255, nullable=false, unique=true)
+ */
+private $apiKey;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;After that you need to create your custom ApiKeyAuthenticator, for example:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;namespace AppBundle\Security;
+
+use AppBundle\Entity\PvpUser;
+use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
+use Symfony\Component\Security\Core\Exception\AuthenticationException;
+use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Security\Core\User\UserProviderInterface;
+use Symfony\Component\Security\Guard\AuthenticatorInterface;
+use Symfony\Component\Security\Guard\Token\GuardTokenInterface;
+use Symfony\Component\Security\Guard\Token\PostAuthenticationGuardToken;
+
+class ApiKeyAuthenticator implements AuthenticatorInterface
+{
+    private $em;
+
+    public function __construct(EntityManagerInterface $em)
+    {
+        $this-&amp;gt;em = $em;
+    }
+
+    public function start(Request $request, AuthenticationException $authException = null)
+    {
+        return new Response(&#39;Auth header required&#39;, 401);
+    }
+
+    public function supports(Request $request)
+    {
+        return $request-&amp;gt;headers-&amp;gt;has(&#39;apikey&#39;);
+    }
+
+    public function getCredentials(Request $request)
+    {
+        return array(
+            &#39;token&#39; =&amp;gt; $request-&amp;gt;headers-&amp;gt;get(&#39;apikey&#39;),
+        );
+    }
+
+    public function getUser($credentials, UserProviderInterface $userProvider)
+    {
+        $apiKey = $credentials[&#39;token&#39;];
+
+        if (null === $apiKey) {
+            return;
+        }
+
+        $user = $this-&amp;gt;em-&amp;gt;getRepository(User::class)-&amp;gt;findOneByApiKey($apiKey);
+
+        if (null == $user) {
+            return null;
+        }
+
+        return $userProvider-&amp;gt;loadUserByUsername($user-&amp;gt;getUsername());
+    }
+
+    public function checkCredentials($credentials, UserInterface $user)
+    {
+        //here you can check password if necessary
+        return true;
+    }
+
+    public function createAuthenticatedToken(UserInterface $user, $providerKey)
+    {
+        return new PostAuthenticationGuardToken(
+            $user,
+            $providerKey,
+            $user-&amp;gt;getRoles()
+        );
+    }
+
+    public function onAuthenticationFailure(Request $request, AuthenticationException $exception)
+    {
+        return new Response(&#39;Authentication Failure&#39;, 401);
+    }
+
+    public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey)
+    {
+        return null;
+    }
+
+    public function supportsRememberMe()
+    {
+        return false;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Explanation of functions&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;start&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;This is called when an anonymous request accesses a resource that requires authentication. The job of this method is to return some response that &amp;quot;helps&amp;quot; the user start the authentication process.
+ It must return a Response object
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;supports&lt;/strong&gt;
+This function indicates if the authenticator supports the given Request
+It must return a boolean value&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;getCredentials&lt;/strong&gt;
+This function gets the authentication credentials from the request and returns them into an array or variable, it depends on your system&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;getUser&lt;/strong&gt;
+Returns a UserInterface object based on the credentials.
+It must return a UserInterface object or null.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;checkCredentials&lt;/strong&gt;
+Returns true if the credentials are valid.
+It must return a boolean value&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;createAuthenticatedToken&lt;/strong&gt;
+Creates an authenticated token for the given user
+It must return a GuardTokenInterface object&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;onAuthenticationFailure&lt;/strong&gt;
+This function is called when authentication has been executed, but has failed (e.g. wrong apikey).
+It must return a Response object or null&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;onAuthenticationSuccess&lt;/strong&gt;
+This function is called when authentication has been executed successfully.
+It must return a Response object or null&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;supportsRememberMe&lt;/strong&gt;
+This function indicates if authentication supports the remember me function
+It must return a boolean value&lt;/p&gt;
+&lt;p&gt;In this code we check in every request if there is the key apikey into the headers.
+If that header exists the authenticator tries to load an user by the apikey stored into the database. Then if the user is found, checks if it is allowed to access the resource requested.&lt;/p&gt;
+&lt;p&gt;In this way you can use &lt;strong&gt;both authenticator&lt;/strong&gt; for all routes.
+But if you want to close only some routes you can specify many rules into your &lt;strong&gt;security.yml&lt;/strong&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -68,8 +240,145 @@ To include your private Bitbucket repository via Composer you need to add this l
       <pubDate>Fri, 18 May 2018 14:42:37 +0200</pubDate>
       
       <guid>/post/symfony-4/</guid>
-      <description>Symfony 4 is the newest version of the one of the most famous PHP frameworks. It has been released on the 30th of November 2017 and it&amp;rsquo;s having a great success! One of the biggest difference with the older versions is the presence of very small dependencies installed when you init your Symfony 4 project. Symfony 4 is so tiny that Silex project has been dismissed.
-How to Install Symfony 4 In order to create a new Symfony 4 application you need to have PHP 7.</description>
+      <description>&lt;p&gt;&lt;strong&gt;Symfony 4&lt;/strong&gt; is the newest version of the one of the most famous PHP frameworks.
+It has been released on the 30th of November 2017 and it&amp;rsquo;s having a great success!
+One of the biggest difference with the older versions is the presence of very small dependencies installed when you init your Symfony 4 project.
+Symfony 4 is so tiny that &lt;a href=&#34;https://silex.symfony.com/&#34;&gt;Silex&lt;/a&gt; project has been dismissed.&lt;/p&gt;
+&lt;h2 id=&#34;how-to-install-symfony-4&#34;&gt;How to Install Symfony 4&lt;/h2&gt;
+&lt;p&gt;In order to create a new Symfony 4 application you need to have &lt;strong&gt;PHP 7.1&lt;/strong&gt; or higher and Composer installed.
+With &lt;strong&gt;Composer&lt;/strong&gt; installed you can create the project launching this command into your console:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;composer create-project symfony/website-skeleton my-project
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This is the command for traditional web applications that downloads a base skeleton of a Symfony project with a ready to start default configuration.
+If you are building microservices, console applications or APIs, consider using the much simpler skeleton project.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;composer create-project symfony/skeleton my-project
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In this version there aren&amp;rsquo;t bundles installed so it&amp;rsquo;s smaller.&lt;/p&gt;
+&lt;h2 id=&#34;directory-structure&#34;&gt;Directory Structure&lt;/h2&gt;
+&lt;p&gt;Symfony 4 has changed a bit its directory structure according to other frameworks and community requests, so now the new directory structure is:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://alessandrominoccheri.github.io/img/symfony_folder_strcuture.jpg&#34; alt=&#34;Directory Structure Image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;app/&lt;/strong&gt;
+The application configuration, templates and translations, where you can find the AppKernel file, the main entry point of the application configuration.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;bin/&lt;/strong&gt;
+Executable files (e.g. bin/console).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;src/&lt;/strong&gt;
+The project&amp;rsquo;s PHP code, where you have controllers, templates and entities directories.
+In this folder there isn&amp;rsquo;t a main bundle because Symfony 4&amp;rsquo;s idea is to have a single project instead of more packages in a project.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;tests/&lt;/strong&gt;
+Automatic tests (e.g. Unit tests with PHPUnit or Behat or others).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;var/&lt;/strong&gt;
+Generated files (cache, logs, etc.).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;vendor/&lt;/strong&gt;
+External libraries installed by composer.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;public/&lt;/strong&gt;
+The web root directory where are stored public and static files like images, stylesheets and JavaScript files, this folder is the old &amp;ldquo;web&amp;rdquo; folder.&lt;/p&gt;
+&lt;h2 id=&#34;environment-variables&#34;&gt;Environment Variables&lt;/h2&gt;
+&lt;p&gt;When designing your system, you may wish to have different variables that can be not the same as in other environments.
+In previous Symfony versions you put that variables into a file called &lt;strong&gt;parameters.yml&lt;/strong&gt; and in parameters.yml.yourenv. Now that file doesn&amp;rsquo;t exist (you can obviously change your code to use it but it&amp;rsquo;s a little bit complex) and you need to write those variables in a file called .env in the project root.
+Obviously you can have different .env files but it depends on how many environments you have into your application.
+Here is a simple &lt;strong&gt;.env&lt;/strong&gt; file:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;DB_USER=root
+DB_PASS=pass
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You can also use variables inside it like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;DB_USER=root
+DB_PASS=${DB_USER}pass
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The component that reads those files is the Dotenv component that parses .env files to make environment variables stored in them accessible via &lt;strong&gt;getenv()&lt;/strong&gt;, &lt;strong&gt;$_ENV&lt;/strong&gt; or &lt;strong&gt;$_SERVER&lt;/strong&gt;.
+If you don&amp;rsquo;t already have it in your project you can launch this command to form your CLI to use it:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;composer require symfony/dotenv
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To get the value of an environment variable you can use this syntax inside your code:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;$dbUser = getenv(&amp;#39;DB_USER&amp;#39;);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Remember that Symfony Dotenv never overwrites existing environment variables.&lt;/p&gt;
+&lt;h2 id=&#34;autowiring&#34;&gt;Autowiring&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Autowiring&lt;/strong&gt; is one of the most powerful feature in Symfony 4 (you can use it since Symfony 3.3 version).
+It allows you to manage services in the container with minimal configuration, without specifying, for example, all the arguments that have to be passed to your service (now also controllers are services!).
+So if you have a service class where you need to pass into __construct method some other services you only need to enable autowiring and Symfony will do it for you!&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;namespace App\Service;
+use App\Util\Bar;
+use Psr\Log\LoggerInterface;
+class Foo
+{
+    private $logger;
+    public function __construct(LoggerInterface $logger)
+    {
+        $this-&amp;gt;logger = $logger;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In the older method you needed to do this into your &lt;strong&gt;services.yml&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;app.foo:
+    class:     AppBundle\Services\Foo
+    arguments: [&#39;@logger&#39;]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In this new version you can do like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;app.foo:
+    class: AppBundle\Services\Foo
+    public: true
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;So you need to specify only public as true. Imagine having plenty arguments to declare for many services, in this way you will gain spare time!
+Basically, services aren&amp;rsquo;t public so you need to render it true into services.yml if you want also in this way:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: true
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This is the default configuration of your services and as you can see it&amp;rsquo;s under _defaults.
+If you want to have different configuration for your service, for example a private service, you can write this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: true
+
+    App\Services\YourService:
+        class: App\Services\YourService
+        public: false
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;So the Autowire option indicates to Symfony to automatically inject dependencies in your services.
+Autoconfigure option indicates to Symfony to automatically register your services as commands, event subscribers, etc.&lt;/p&gt;
+&lt;p&gt;Now also controllers are services so it&amp;rsquo;s easy to make unit tests on it instead of using integration tests that are slower.
+So now you can also inject services inside your controller like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;public function index(LoggerInterface $logger) 
+{
+    $logger-&amp;gt;info(&amp;#39;This is a injected service!&amp;#39;);
+    //code
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In this action you inject &lt;strong&gt;LoggerInterface&lt;/strong&gt; directly and you don&amp;rsquo;t need to instantiate it inside the action!&lt;/p&gt;
+&lt;h2 id=&#34;flex-and-recipes&#34;&gt;Flex and Recipes&lt;/h2&gt;
+&lt;p&gt;Symfony Flex is a Composer plugin and it&amp;rsquo;s called when you run require, update, and remove composer commands.
+When you run those flex search commands inside &lt;strong&gt;Symfony Flex&lt;/strong&gt;, the server will take it, install it and configure it for you if the package is on there.
+The power of Flex is that you don&amp;rsquo;t have to watch all the libraries&amp;rsquo; readme files to configure your package since there is a recipe that does it for you.
+You don&amp;rsquo;t need to add your new bundle into AppKernel.php because flex already did it when you install it.
+If your package doesn&amp;rsquo;t exist, it fallbacks on Composer standard behaviour.&lt;/p&gt;
+&lt;p&gt;Flex keeps track of the recipes it installed in a &lt;strong&gt;symfony.lock&lt;/strong&gt; file, which must be committed to your code repository.
+Recipes are stored in two different github repositories:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/symfony/recipes&#34;&gt;Recipe&lt;/a&gt;, is a curated list of recipes for high quality and maintained packages. Symfony Flex looks into this repository by default.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/symfony/recipes-contrib&#34;&gt;Recipes-Contrib&lt;/a&gt;, contains all the recipes created by the community. All of them are guaranteed to work, but their associated packages could be unmaintained. Symfony Flex ignores these recipes by default, but you can execute this command to start using them in your project:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;composer config extra.symfony.allow-contrib true
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Inside this site &lt;a href=&#34;https://symfony.sh/&#34;&gt;Symfony&lt;/a&gt; you can view the recipes complete list where you can find how to install them into your project.
+Sometimes there is an alias so you can use it like this one to be faster and to remember the command easier:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;composer require logger
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;A recipe contains a &lt;strong&gt;manifest.json&lt;/strong&gt; file where the package configuration is stored. When Flex installs this package it gets the manifest.json file and applies default configuration to your project, so you can use the new library immediately without writing any configuration.&lt;/p&gt;
+&lt;h2 id=&#34;the-messenger-component&#34;&gt;The Messenger Component&lt;/h2&gt;
+&lt;p&gt;The Messenger component helps applications send and receive messages to/from other applications or via message queues.
+In order to install the component, you need to launch from your console:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;composer require symfony/messenger
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://alessandrominoccheri.github.io/img/symfony_messenger_component.jpg&#34; alt=&#34;Messenger Component&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;how-does-it-work&#34;&gt;How does it work?&lt;/h3&gt;
+&lt;p&gt;Sender serializes and sends a message to something. For example this something can be a message broker or a third party API.
+The bus dispatches the message. The behaviour of the bus is in its ordered middleware stack. The component comes with a set of middleware that you can use.
+When using the message bus with &lt;strong&gt;Symfony&amp;rsquo;s FrameworkBundle&lt;/strong&gt;, the following middleware are configured for you:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;LoggingMiddleware&lt;/strong&gt; (logs the processing of your messages)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;SendMessageMiddleware&lt;/strong&gt; (enables asynchronous processing)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;HandleMessageMiddleware&lt;/strong&gt; (calls the registered handle)&lt;/p&gt;
+&lt;p&gt;Once the message is dispatched to the bus it will be handled by a &amp;ldquo;message handler&amp;rdquo;.
+A message handler is a PHP callable (i.e. a function or an instance of a class) that will do the required processing for your message.
+In order to send and receive messages, you will have to configure the adapter. The adapter will be responsible for communicating with your message broker or 3rd parties.
+Then the receiver Receiver deserializes and forwards the message to the handler(s). This can be a message queue puller or an API endpoint.&lt;/p&gt;
+&lt;p&gt;For further information contact me or follow  me on:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/minompi&#34;&gt;Twitter&lt;/a&gt;
+&lt;a href=&#34;https://github.com/AlessandroMinoccheri&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -78,19 +387,158 @@ How to Install Symfony 4 In order to create a new Symfony 4 application you need
       <pubDate>Tue, 20 Mar 2018 15:09:20 +0100</pubDate>
       
       <guid>/post/php7-2/</guid>
-      <description>PHP 7.2 has many features about security, implementations and deprecated functions. In addition, it introduces a performance increase (already in version 7 it was done a great work): PHP 7.2 is 20% faster than version 7.0 and 10% faster than version 7.1.
-Here&amp;rsquo;s all the highlights offered by this new version.
-Type hinting argument Since PHP 5 it was possibile to specify the argument type passed to a function.
-Example:</description>
+      <description>&lt;p&gt;&lt;strong&gt;PHP 7.2&lt;/strong&gt; has many features about security, implementations and deprecated functions.
+In addition, it introduces a performance increase (already in version 7 it was done a great work): PHP 7.2 is 20% faster than version 7.0 and 10% faster than version 7.1.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s all the &lt;strong&gt;highlights&lt;/strong&gt; offered by this new version.&lt;/p&gt;
+&lt;h2 id=&#34;type-hinting-argument&#34;&gt;Type hinting argument&lt;/h2&gt;
+&lt;p&gt;Since PHP 5 it was possibile to specify the argument type passed to a function.&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;class SimpleClass {
+    public $foo = &amp;#39;bar&amp;#39;;
+}
+
+$simpleClass = new SimpleClass;
+
+function test(SimpleClass $simpleClass){
+    return $simpleClass-&amp;gt;foo;
+}
+
+echo test($simpleClass);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Since PHP 7.1 if it was passed a non SimpleClass type value to the function it generated a 500 error.&lt;/p&gt;
+&lt;p&gt;With PHP 7.2 the &lt;strong&gt;type hinting argument&lt;/strong&gt; can be declared as object, which means that it&amp;rsquo;s a generic object.&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;class SimpleClass {
+    public $foo = &amp;#39;bar&amp;#39;;
+}
+
+class FirstClass extends SimpleClass {
+    public $foo = &amp;#39;baz&amp;#39;;
+}
+class SecondClass extends SimpleClass{
+    public $foo = &amp;#39;foobar&amp;#39;;
+}
+
+$firstClass = new FirstClass;
+$secondClass = new SecondClass;
+
+function test(object $arg)
+{
+    return $arg-&amp;gt;var;
+}
+
+echo test($firstClass);
+
+echo test($secondClass);
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In this example the code runs declaring the argument object type and then a generic object so it doesn&amp;rsquo;t generate a 500 error.
+Furthermore, this features permits to have a type &amp;ldquo;variance&amp;rdquo; implemented in the subclass for example.&lt;/p&gt;
+&lt;p&gt;Object becomes a key value from version 7.2, so be sure to not use it for class names, interfaces or traits.&lt;/p&gt;
+&lt;h2 id=&#34;type-hinting-return-value&#34;&gt;Type hinting return value&lt;/h2&gt;
+&lt;p&gt;Since version 7.2 it is possible to declare &lt;strong&gt;type hint return value&lt;/strong&gt; as object.&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;function test($arg) :object
+{
+    return new Foo($arg);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;abstract-methods-and-re-writable-interfaces&#34;&gt;Abstract methods and re-writable interfaces&lt;/h2&gt;
+&lt;p&gt;PHP 7.2 allows to &lt;strong&gt;overwrite abstract methods and interfaces&lt;/strong&gt; which is to omit the declaration type of a parameter in an abstract method extended by the parent class.&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;abstract class foo
+{
+    abstract function baz(string $yourVar);
+}
+
+abstract class bar extends foo
+{
+    abstract function baz($yourVar) : int;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The same functionality also applies to interfaces, for example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;interface foo
+{
+    public function test(string $yourVar);
+}
+
+class bar implements foo
+{
+    public function test($yourVar)
+    {
+        //your code
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This new feature allows to update parent classes without updating all their subclasses.&lt;/p&gt;
+&lt;p&gt;Probably this is a marginal improvement  (it will never be used so frequently).&lt;/p&gt;
+&lt;h2 id=&#34;comma-into-syntax-at-the-end-of-use-statements-lists&#34;&gt;Comma into syntax at the end of use statement&amp;rsquo;s lists&lt;/h2&gt;
+&lt;p&gt;Comma at the end of the last array element it&amp;rsquo;s valid in the PHP syntax, and sometimes it&amp;rsquo;s encouraged to add easily new elements and avoid analysis errors by missing comma.&lt;/p&gt;
+&lt;p&gt;Since PHP 7.2 version it is possible to use commas even for the &amp;ldquo;use&amp;rdquo; inside classes.&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;use Foo\Bar\{
+    Foo,
+    Bar,
+    Baz,
+};
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;argon2-in-passwords-hash&#34;&gt;Argon2 in password&amp;rsquo;s hash&lt;/h2&gt;
+&lt;p&gt;Argon2 is a powerful hashing algorithm that was selected as the 2015 Password Hashing Competition winner, and PHP 7.2 introduces as a secure substitute for the Bcrypt algorithm.&lt;/p&gt;
+&lt;p&gt;The new PHP version introduces the PASSWORD_ARGON2I constant, which now can be used in password_ * function, following this syntax:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;password_hash(&amp;#39;secretpassword&amp;#39;, PASSWORD_ARGON2I);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Despite Bcrypt, which requires only one factor, Argon2 considers three different factors:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A memory cost that defines Kib number to use during hashing (standard values are 1 &amp;laquo; 10 or 1024 KiB or 1 MiB);&lt;/li&gt;
+&lt;li&gt;A time cost that defines the number of interactions of the hashing algorithm (standard value is 2);&lt;/li&gt;
+&lt;li&gt;A parallelism factor, that sets the parallel thread number which will be used during hashing (standard value is 2);&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Three new costants define standard cost&amp;rsquo;s factors:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. PASSWORD_ARGON2_DEFAULT_MEMORY_COST
+
+2. PASSWORD_ARGON2_DEFAULT_TIME_COST
+
+3. PASSWORD_ARGON2_DEFAULT_THREADS
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;$options = [&amp;#39;memory_cost&amp;#39; =&amp;gt; 1&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;lt;&lt;/span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;11&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;time_cost&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&amp;gt; 4, &amp;#39;threads&amp;#39; =&amp;gt; 2];
+password_hash(&amp;#39;secretpassword&amp;#39;, PASSWORD_ARGON2I, $options);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;libsodium-as-part-of-the-php-core&#34;&gt;Libsodium as part of the PHP Core&lt;/h2&gt;
+&lt;p&gt;Since version 7.2, PHP includes the &lt;strong&gt;Sodium library&lt;/strong&gt; in its core. Libsodium is a cross-platform library and cross-languages for encrypting, decrypting, signatures, password hashing and much more.
+The library was previously available by PECL.
+PHP 7.2 is the first programming language that adds modern encrypting in its libraries.&lt;/p&gt;
+&lt;h2 id=&#34;count-scalar-values&#34;&gt;Count scalar values&lt;/h2&gt;
+&lt;p&gt;Did you know that it is possible to count scalar values? In reality this is insignificant , as the function count() returns only 1 for scalars.&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;var_dump(count(null)); // int(0)
+var_dump(count(0)); // int(1)
+var_dump(count(4)); // int(1)
+var_dump(count(&amp;#39;4&amp;#39;)); // int(1)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Since PHP 7.2, it will show a message:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Warning: count(): The parameter must be an array or an object that implements Countable into / in / 4aIl2 on line 3.
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;new-features&#34;&gt;New features&lt;/h2&gt;
+&lt;p&gt;PHP 7.2 introduces some new features which can be very useful: ftp_append(), hash_hmac_algos(), imagesetclip(), imagegetclip(), imageopenpolygon(), imageresolution(), imagecreatefrombmp(), imagebmp().&lt;/p&gt;
+&lt;h2 id=&#34;deprecated-functions&#34;&gt;Deprecated functions&lt;/h2&gt;
+&lt;p&gt;The &lt;strong&gt;assert()&lt;/strong&gt; function verifies data assertion and takes appropriate actions if the result is FALSE.
+Using assert() with a string argument it&amp;rsquo;s now deprecated because it opens a RCE vulnerability.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;__autoload&lt;/strong&gt; function has been substituted by spl_autoload_register in PHP 5.1.
+Now it&amp;rsquo;s generated a deprecation message during compilation when it&amp;rsquo;s revealed.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;$php_errormsg&lt;/strong&gt; variable is created in the local scope when a non-fatal error is thrown. Since PHP 7.2 error_get_last and error_clear_last should be used instead.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;create_function()&lt;/strong&gt; allows to create a function with a generated function name, an argument list and the code body passed as arguments. Because of security problems and inadequate performances, it has been signed as deprecated (using enclosure is otherwise suggested).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;each()&lt;/strong&gt; is used to iterate on an array similar to foreach() that is 10 times faster.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;$errcontext&lt;/strong&gt; is an array that contains local existing variables at the error generation moment.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;gmp_random()&lt;/strong&gt;  is considered to be dependent on a platform and it will be deprecated. It&amp;rsquo;s otherwise suggested to use gmp_random_bits () and gmp_random_rage ().&lt;/p&gt;
+&lt;p&gt;For &lt;strong&gt;mbstring.func_overload&lt;/strong&gt;, the ini setting inserted into a default value which differs from zero has been signed as deprecated.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;parse_str()&lt;/strong&gt; analyzes a query string in an array if a second argument is passed or if the local symbol table isn&amp;rsquo;t used. Because the dynamical variables setting of the function isn&amp;rsquo;t encouraged for security reasons, the use of parse_str() without a second argument will generate a deprecation advice.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(unset)cast&lt;/strong&gt; is an expression that returns always null and is considered not useful.&lt;/p&gt;
+&lt;p&gt;For further information contact me or follow  me on:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/minompi&#34;&gt;Twitter&lt;/a&gt;
+&lt;a href=&#34;https://github.com/AlessandroMinoccheri&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
-      <title>Presentations</title>
-      <link>/presentations/</link>
-      <pubDate>Sat, 08 May 2010 22:17:36 +0200</pubDate>
+      <title></title>
+      <link>/videos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/presentations/</guid>
-      <description>Symfony + AWS Lambda - sfday 2019</description>
+      <guid>/videos/</guid>
+      <description>&lt;h2 id=&#34;symfony--aws-lambda---sfday-2019&#34;&gt;Symfony + AWS Lambda - sfday 2019&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://vimeo.com/379300000&#34;&gt;&lt;img src=&#34;https://i.vimeocdn.com/video/839318846.webp?mw=1920&amp;amp;mh=1080&amp;amp;q=70&#34; alt=&#34;Symfony + AWS Lambda - sfday 2019&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>

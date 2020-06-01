@@ -1,308 +1,125 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-
-  <meta charset="utf-8" />
-
-  
-  <title>Symfony &#43; AWS Lambda Part1</title>
-
-  
-  
-
-
-
-
-
-  
-  <meta name="author" content="Alessandro Minoccheri" />
-  <meta name="description" content="Symfony is one of the most used frameworks in the PHP world. Nowadays talking about serverless is common, so it&amp;rsquo;s very important to know how to use Symfony with this technology. In the following article, I have described how to deploy a Symfony application to AWS Lambda using Bref. This is the first part, the second part will be posted very soon! Stay tuned!
-Symfony AWS Lambda Part 1" />
-
-  
-  
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@minompi" />
-    <meta name="twitter:title" content="Symfony &#43; AWS Lambda Part1" />
-    <meta name="twitter:description" content="Symfony is one of the most used frameworks in the PHP world. Nowadays talking about serverless is common, so it&amp;rsquo;s very important to know how to use Symfony with this technology. In the following article, I have described how to deploy a Symfony application to AWS Lambda using Bref. This is the first part, the second part will be posted very soon! Stay tuned!
-Symfony AWS Lambda Part 1" />
-    <meta name="twitter:image" content="/img/avatar.jpg" />
-  
-
-  
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Symfony &#43; AWS Lambda Part1" />
-  <meta property="og:description" content="Symfony is one of the most used frameworks in the PHP world. Nowadays talking about serverless is common, so it&amp;rsquo;s very important to know how to use Symfony with this technology. In the following article, I have described how to deploy a Symfony application to AWS Lambda using Bref. This is the first part, the second part will be posted very soon! Stay tuned!
-Symfony AWS Lambda Part 1" />
-  <meta property="og:url" content="/post/symfony-aws-lambda-part1/" />
-  <meta property="og:image" content="/img/avatar.jpg" />
-
-
-
-
-<meta name="generator" content="Hugo 0.70.0" />
-
-
-<link rel="canonical" href="/post/symfony-aws-lambda-part1/" />
-<link rel="alternative" href="/index.xml" title="Alessandro Minoccheri" type="application/atom+xml" />
-
-
-<meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<meta name="format-detection" content="telephone=no,email=no,adress=no" />
-<meta http-equiv="Cache-Control" content="no-transform" />
-
-
-<meta name="robots" content="index,follow" />
-<meta name="referrer" content="origin-when-cross-origin" />
-<meta name="google-site-verification" content="GZsV12xJYp9V0PX9-GoJgG2SjrVjkps0IP4rMGTpzoE" />
-
-
-
-
-
-
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-<meta name="apple-mobile-web-app-title" content="Alessandro Minoccheri" />
-<meta name="msapplication-tooltip" content="Alessandro Minoccheri" />
-<meta name='msapplication-navbutton-color' content="#5fbf5e" />
-<meta name="msapplication-TileColor" content="#5fbf5e" />
-<meta name="msapplication-TileImage" content="/img/tile-image-windows.png" />
-<link rel="icon" href="/img/favicon.ico" />
-<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png" />
-<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png" />
-<link rel="icon" sizes="192x192" href="/img/touch-icon-android.png" />
-<link rel="apple-touch-icon" href="/img/touch-icon-apple.png" />
-<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5fbf5e" />
-
-
-
-<link rel="stylesheet" href="//cdn.bootcss.com/video.js/6.2.8/alt/video-js-cdn.min.css" />
-
-<link rel="stylesheet" href="/css/bundle.css" />
-<link rel="stylesheet" href="/css/style.css" />
-
-
-  
-  <!--[if lt IE 9]>
-    <script src="//cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <script src="//cdn.bootcss.com/video.js/6.2.8/ie8/videojs-ie8.min.js"></script>
-  <![endif]-->
-
-<!--[if lte IE 11]>
-    <script src="//cdn.bootcss.com/classlist/1.1.20170427/classList.min.js"></script>
-  <![endif]-->
-
-
-<script src="//cdn.bootcss.com/object-fit-images/3.2.3/ofi.min.js"></script>
-
-
-<script src="//cdn.bootcss.com/smooth-scroll/12.1.4/js/smooth-scroll.polyfills.min.js"></script>
-
-
-</head>
-  <body>
     
-    <div class="suspension">
-      <a title="Go to top" class="to-top is-hide"><span class="icon icon-up"></span></a>
-      
         
-      
-    </div>
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer-when-downgrade">
+
+<title>Symfony &#43; AWS Lambda Part1  - Alessandro Minoccheri</title>
+<meta name="description" content="Alessandro Minoccheri software developer">
+
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="favicon.png">
+
+<link rel="stylesheet" href="css/style.css?rnd=1591046890" />
+
+<link rel="stylesheet" href="css/my.css?rnd=1591046890">
+
+<meta property="og:title" content="Symfony &#43; AWS Lambda Part1" />
+<meta property="og:description" content="Symfony is one of the most used frameworks in the PHP world. Nowadays talking about serverless is common, so it&rsquo;s very important to know how to use Symfony with this technology. In the following article, I have described how to deploy a Symfony application to AWS Lambda using Bref. This is the first part, the second part will be posted very soon! Stay tuned!
+Symfony AWS Lambda Part 1" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/symfony-aws-lambda-part1/" />
+<meta property="og:image" content="images/og-featured.png"/>
+<meta property="article:published_time" content="2019-10-31T08:11:25+01:00" />
+<meta property="article:modified_time" content="2019-10-31T08:11:25+01:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="images/og-featured.png"/>
+
+<meta name="twitter:title" content="Symfony &#43; AWS Lambda Part1"/>
+<meta name="twitter:description" content="Symfony is one of the most used frameworks in the PHP world. Nowadays talking about serverless is common, so it&rsquo;s very important to know how to use Symfony with this technology. In the following article, I have described how to deploy a Symfony application to AWS Lambda using Bref. This is the first part, the second part will be posted very soon! Stay tuned!
+Symfony AWS Lambda Part 1"/>
+
+
+
+
+
+
+    
+</head>
+<body>
+    <a class="skip-main" href="#main">Skip to main content</a>
+    <div class="container">
+        <header> 
+            
+                <h1 class="site-header">
+    <a href="/">Alessandro Minoccheri</a>
+</h1>
+<nav>
     
     
-  <header class="site-header">
-  <img class="avatar" src="https://alessandrominoccheri.github.io/img/alessandro_minoccheri.jpg" alt="Avatar">
-  
-  <h2 class="title">Alessandro Minoccheri</h2>
-  
-  <p class="subtitle"></p>
-  <button class="menu-toggle" type="button">
-    <span class="icon icon-menu"></span>
-  </button>
-  <nav class="site-menu collapsed">
-    <h2 class="offscreen">Main Menu</h2>
-    <ul class="menu-list">
-      
-      
-      
-      
-        <li class="menu-item
+    <a class="" href="/posts/" title="Posts">Posts</a>
+    
+    <a class="" href="/videos/" title="Videos">Videos</a>
+    
+</nav>
+
             
+        </header>
+        <main id="main" tabindex="-1"> 
             
-            
-              is-active
-            ">
-            <a href="/">Home</a>
-          </li>
-      
-        <li class="menu-item
-            
-            
-            ">
-            <a href="/about/">About Me</a>
-          </li>
-      
-        <li class="menu-item
-            
-            
-            ">
-            <a href="/presentations/">Presentations</a>
-          </li>
-      
-    </ul>
-  </nav>
-  <nav class="social-menu collapsed">
-    <h2 class="offscreen">Social Networks</h2>
-    <ul class="social-list">
 
-      
-      <li class="social-item">
-        <a href="mailto:alessandro.minoccheri@gmail.com" title="Email"><span class="icon icon-email"></span></a>
-      </li>
-
-      
-      <li class="social-item">
-        <a href="//github.com/AlessandroMinoccheri" title="GitHub"><span class="icon icon-github"></span></a>
-      </li>
-
-      <li class="social-item">
-        <a href="//twitter.com/minompi" title="Twitter"><span class="icon icon-twitter"></span></a>
-      </li>
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      <li class="social-item">
-        <a href="//www.linkedin.com/in/alessandro-minoccheri-68756598" title="Linkedin"><span class="icon icon-linkedin"></span></a>
-      </li>
-
-      
-
-      
-
-      
-
-      <li class="social-item">
-        <a href="/index.xml"><span class="icon icon-rss" title="RSS"></span></a>
-      </li>
-
-    </ul>
-  </nav>
-</header>
-
-  <section class="main post-detail">
-    <header class="post-header">
-      <h1 class="post-title">Symfony &#43; AWS Lambda Part1</h1>
-      <p class="post-meta">@Alessandro Minoccheri · Oct 31, 2019 · 1 min read</p>
-    </header>
-    <article class="post-content"><p>Symfony is one of the most used frameworks in the PHP world.
+    <article class="post">
+        <header>
+            <h1>Symfony &#43; AWS Lambda Part1</h1>
+        </header>
+        <div class="content">
+            <p>Symfony is one of the most used frameworks in the PHP world.
 Nowadays talking about serverless is common, so it&rsquo;s very important to know how to use Symfony with this technology.
 In the following article, I have described how to deploy a Symfony application to AWS Lambda using Bref.
 This is the first part, the second part will be posted very soon!
 Stay tuned!</p>
 <p><a href="https://medium.com/flowingis/deploy-a-symfony-application-with-aws-lambda-quick-guide-65430c0edda5">Symfony AWS Lambda Part 1</a></p>
-</article>
-    <footer class="post-footer">
-      
-      <ul class="post-tags">
+
+        </div>
         
-          <li><a href="/tags/symfony"><span class="tag">Symfony</span></a></li>
-        
-          <li><a href="/tags/lambda"><span class="tag">Lambda</span></a></li>
-        
-          <li><a href="/tags/aws"><span class="tag">Aws</span></a></li>
-        
-          <li><a href="/tags/serverless"><span class="tag">Serverless</span></a></li>
-        
-          <li><a href="/tags/php"><span class="tag">Php</span></a></li>
-        
-      </ul>
-      
-      <p class="post-copyright">
-        This post was published <strong>190</strong> days ago, content in the post may be inaccurate, even wrong now, please take risk yourself.
-      </p>
-    </footer>
+
     
-      
+
+
+<div class="article-info">
     
-  </section>
-  <footer class="site-footer">
-  <p>© 2017-2020 Alessandro Minoccheri</p>
-  <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/laozhu/hugo-nuo" target="_blank">Nuo</a>.</p>
-  
-</footer>
+        <div class="article-date">2019-10-31</div>
+    
+    <div class="article-taxonomies">
+        
+            
+                <ul class="article-tags">
+                    
+                        <li><a href="tags/symfony">#symfony</a></li>
+                    
+                        <li><a href="tags/lambda">#lambda</a></li>
+                    
+                        <li><a href="tags/aws">#aws</a></li>
+                    
+                        <li><a href="tags/serverless">#serverless</a></li>
+                    
+                        <li><a href="tags/php">#php</a></li>
+                    
+                </ul>
+        
+    </div>
+</div>
+
+    </article>
+    
 
 
+        </main>
+        <footer>
+            
+                
+                
 
-<script async src="//cdn.bootcss.com/video.js/6.2.8/alt/video.novtt.min.js"></script>
-<script async src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [['$','$'], ['\\(','\\)']],
-      displayMath: [['$$','$$'], ['\\[','\\]']],
-      processEscapes: true,
-      processEnvironments: true,
-      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-      TeX: { equationNumbers: { autoNumber: "AMS" },
-      extensions: ["AMSmath.js", "AMSsymbols.js"] }
-    }
-  });
-</script>
-<script type="text/x-mathjax-config">
-  // Fix <code> tags after MathJax finishes running. This is a
-  // hack to overcome a shortcoming of Markdown. Discussion at
-  // https://github.com/mojombo/jekyll/issues/199
-  MathJax.Hub.Queue(() => {
-    MathJax.Hub.getAllJax().map(v => v.SourceElement().parentNode.className += ' has-jax');
-  });
-</script>
-
-<script src="/js/bundle.js"></script>
-
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-116543754-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-
-
-
-
-  </body>
+                <p>© Alessandro Minoccheri, 2020<br>
+Powered by <a target="_blank" href="https://gohugo.io/">Hugo</a>, theme <a target="_blank" href="https://github.com/mitrichius/hugo-theme-anubis">Anubis</a>.
+</p>
+            
+        </footer>
+    </div>
+</body>
 </html>

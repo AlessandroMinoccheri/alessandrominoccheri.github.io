@@ -3,12 +3,12 @@
   <channel>
     <title>lambda on Alessandro Minoccheri</title>
     <link>/tags/lambda/</link>
-    <description>Recent content in lambda on Alessandro Minoccheri</description>
+    <description>Alessandro Minoccheri (lambda)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 04 Jan 2020 14:30:39 +0100</lastBuildDate>
     
-	<atom:link href="/tags/lambda/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/lambda/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,8 +17,10 @@
       <pubDate>Sat, 04 Jan 2020 14:30:39 +0100</pubDate>
       
       <guid>/post/symfony-aws-lambda-part2/</guid>
-      <description>In the previous article, I have explained a basic guideline to deploy your Symfony application into AWS Lambda. Now it&amp;rsquo;s time to understand deeply how does it work
-Symfony AWS Lambda Part 2</description>
+      <description>&lt;p&gt;In the &lt;a href=&#34;https://medium.com/flowingis/deploy-a-symfony-application-with-aws-lambda-quick-guide-65430c0edda5&#34;&gt;previous article&lt;/a&gt;,  I have explained a basic guideline to deploy your Symfony application into AWS Lambda.
+Now it&amp;rsquo;s time to understand deeply how does it work&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://medium.com/flowingis/deploy-a-symfony-application-with-aws-lambda-in-depth-analysis-on-advanced-use-3ad271049b93&#34;&gt;Symfony AWS Lambda Part 2&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -27,8 +29,13 @@ Symfony AWS Lambda Part 2</description>
       <pubDate>Thu, 31 Oct 2019 08:11:25 +0100</pubDate>
       
       <guid>/post/symfony-aws-lambda-part1/</guid>
-      <description>Symfony is one of the most used frameworks in the PHP world. Nowadays talking about serverless is common, so it&amp;rsquo;s very important to know how to use Symfony with this technology. In the following article, I have described how to deploy a Symfony application to AWS Lambda using Bref. This is the first part, the second part will be posted very soon! Stay tuned!
-Symfony AWS Lambda Part 1</description>
+      <description>&lt;p&gt;Symfony is one of the most used frameworks in the PHP world.
+Nowadays talking about serverless is common, so it&amp;rsquo;s very important to know how to use Symfony with this technology.
+In the following article, I have described how to deploy a Symfony application to AWS Lambda using Bref.
+This is the first part, the second part will be posted very soon!
+Stay tuned!&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://medium.com/flowingis/deploy-a-symfony-application-with-aws-lambda-quick-guide-65430c0edda5&#34;&gt;Symfony AWS Lambda Part 1&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>
