@@ -14,17 +14,18 @@
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon-precomposed" href="favicon.png">
 
-<link rel="stylesheet" href="css/style.css?rnd=1611935595" />
+<link rel="stylesheet" href="css/style.css?rnd=1615199692" />
 
-<link rel="stylesheet" href="../css/style.css?rnd=1611935595"><link rel="stylesheet" href="../../css/style.css?rnd=1611935595">
+<link rel="stylesheet" href="../css/style.css?rnd=1615199692"><link rel="stylesheet" href="../../css/style.css?rnd=1615199692">
 
 <meta property="og:title" content="Symfony 4 Installation and new features" />
 <meta property="og:description" content="Symfony 4 is the newest version of the one of the most famous PHP frameworks. It has been released on the 30th of November 2017 and it&rsquo;s having a great success! One of the biggest difference with the older versions is the presence of very small dependencies installed when you init your Symfony 4 project. Symfony 4 is so tiny that Silex project has been dismissed.
 How to Install Symfony 4 In order to create a new Symfony 4 application you need to have PHP 7." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/post/symfony-4/" />
-<meta property="article:published_time" content="2018-05-18T14:42:37+02:00" />
-<meta property="article:modified_time" content="2018-05-18T14:42:37+02:00" />
+<meta property="og:url" content="/post/symfony-4/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2018-05-18T14:42:37&#43;02:00" />
+<meta property="article:modified_time" content="2018-05-18T14:42:37&#43;02:00" />
+
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Symfony 4 Installation and new features"/>
@@ -109,22 +110,22 @@ DB_PASS=${DB_USER}pass
 If you don&rsquo;t already have it in your project you can launch this command to form your CLI to use it:</p>
 <pre><code>composer require symfony/dotenv
 </code></pre><p>To get the value of an environment variable you can use this syntax inside your code:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$dbUser = getenv(&#39;DB_USER&#39;);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$dbUser <span style="color:#f92672">=</span> <span style="color:#a6e22e">getenv</span>(<span style="color:#e6db74">&#39;DB_USER&#39;</span>);
 </code></pre></div><p>Remember that Symfony Dotenv never overwrites existing environment variables.</p>
 <h2 id="autowiring">Autowiring</h2>
 <p><strong>Autowiring</strong> is one of the most powerful feature in Symfony 4 (you can use it since Symfony 3.3 version).
 It allows you to manage services in the container with minimal configuration, without specifying, for example, all the arguments that have to be passed to your service (now also controllers are services!).
 So if you have a service class where you need to pass into __construct method some other services you only need to enable autowiring and Symfony will do it for you!</p>
 <p>Example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">namespace App\Service;
-use App\Util\Bar;
-use Psr\Log\LoggerInterface;
-class Foo
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">namespace</span> <span style="color:#a6e22e">App\Service</span>;
+<span style="color:#66d9ef">use</span> <span style="color:#a6e22e">App\Util\Bar</span>;
+<span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Psr\Log\LoggerInterface</span>;
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Foo</span>
 {
-    private $logger;
-    public function __construct(LoggerInterface $logger)
+    <span style="color:#66d9ef">private</span> $logger;
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __construct(<span style="color:#a6e22e">LoggerInterface</span> $logger)
     {
-        $this-&gt;logger = $logger;
+        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">logger</span> <span style="color:#f92672">=</span> $logger;
     }
 }
 </code></pre></div><p>In the older method you needed to do this into your <strong>services.yml</strong></p>
@@ -157,16 +158,16 @@ If you want to have different configuration for your service, for example a priv
 Autoconfigure option indicates to Symfony to automatically register your services as commands, event subscribers, etc.</p>
 <p>Now also controllers are services so it&rsquo;s easy to make unit tests on it instead of using integration tests that are slower.
 So now you can also inject services inside your controller like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">public function index(LoggerInterface $logger) 
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">index</span>(<span style="color:#a6e22e">LoggerInterface</span> $logger) 
 {
-    $logger-&gt;info(&#39;This is a injected service!&#39;);
-    //code
-}
+    $logger<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">info</span>(<span style="color:#e6db74">&#39;This is a injected service!&#39;</span>);
+    <span style="color:#75715e">//code
+</span><span style="color:#75715e"></span>}
 </code></pre></div><p>In this action you inject <strong>LoggerInterface</strong> directly and you don&rsquo;t need to instantiate it inside the action!</p>
 <h2 id="flex-and-recipes">Flex and Recipes</h2>
 <p>Symfony Flex is a Composer plugin and it&rsquo;s called when you run require, update, and remove composer commands.
 When you run those flex search commands inside <strong>Symfony Flex</strong>, the server will take it, install it and configure it for you if the package is on there.
-The power of Flex is that you don&rsquo;t have to watch all the libraries&rsquo; readme files to configure your package since there is a recipe that does it for you.
+The power of Flex is that you don&rsquo;t have to watch all the libraries' readme files to configure your package since there is a recipe that does it for you.
 You don&rsquo;t need to add your new bundle into AppKernel.php because flex already did it when you install it.
 If your package doesn&rsquo;t exist, it fallbacks on Composer standard behaviour.</p>
 <p>Flex keeps track of the recipes it installed in a <strong>symfony.lock</strong> file, which must be committed to your code repository.

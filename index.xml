@@ -6,10 +6,23 @@
     <description>Alessandro Minoccheri</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 29 Jan 2021 16:40:59 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 05 Mar 2021 16:40:59 +0100</lastBuildDate>
     
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How Dotfiles Can Save You a Lot of Time</title>
+      <link>/post/how-dotfiles-can-save-you-a-lot-of-time/</link>
+      <pubDate>Fri, 05 Mar 2021 16:40:59 +0100</pubDate>
+      
+      <guid>/post/how-dotfiles-can-save-you-a-lot-of-time/</guid>
+      <description>&lt;p&gt;As a developer, I try to automate and optimize all of my processes and workflow.
+A dotfiles repository is a set of configurations that can be used, usually, on every Linux or OSX system.
+You can create your own configuration because&amp;hellip;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://dev.to/minompi/how-dotfiles-can-save-you-a-lot-of-time-55oe&#34;&gt;How dotfiles can save you a lot of time&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Deploy on Friday without fear</title>
@@ -309,22 +322,22 @@ DB_PASS=${DB_USER}pass
 If you don&amp;rsquo;t already have it in your project you can launch this command to form your CLI to use it:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;composer require symfony/dotenv
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To get the value of an environment variable you can use this syntax inside your code:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;$dbUser = getenv(&amp;#39;DB_USER&amp;#39;);
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;$dbUser &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;getenv&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;DB_USER&amp;#39;&lt;/span&gt;);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Remember that Symfony Dotenv never overwrites existing environment variables.&lt;/p&gt;
 &lt;h2 id=&#34;autowiring&#34;&gt;Autowiring&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Autowiring&lt;/strong&gt; is one of the most powerful feature in Symfony 4 (you can use it since Symfony 3.3 version).
 It allows you to manage services in the container with minimal configuration, without specifying, for example, all the arguments that have to be passed to your service (now also controllers are services!).
 So if you have a service class where you need to pass into __construct method some other services you only need to enable autowiring and Symfony will do it for you!&lt;/p&gt;
 &lt;p&gt;Example:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;namespace App\Service;
-use App\Util\Bar;
-use Psr\Log\LoggerInterface;
-class Foo
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;namespace&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;App\Service&lt;/span&gt;;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;use&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;App\Util\Bar&lt;/span&gt;;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;use&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Psr\Log\LoggerInterface&lt;/span&gt;;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Foo&lt;/span&gt;
 {
-    private $logger;
-    public function __construct(LoggerInterface $logger)
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; $logger;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; __construct(&lt;span style=&#34;color:#a6e22e&#34;&gt;LoggerInterface&lt;/span&gt; $logger)
     {
-        $this-&amp;gt;logger = $logger;
+        $this&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;logger&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; $logger;
     }
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In the older method you needed to do this into your &lt;strong&gt;services.yml&lt;/strong&gt;&lt;/p&gt;
@@ -357,16 +370,16 @@ If you want to have different configuration for your service, for example a priv
 Autoconfigure option indicates to Symfony to automatically register your services as commands, event subscribers, etc.&lt;/p&gt;
 &lt;p&gt;Now also controllers are services so it&amp;rsquo;s easy to make unit tests on it instead of using integration tests that are slower.
 So now you can also inject services inside your controller like this:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;public function index(LoggerInterface $logger) 
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;index&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;LoggerInterface&lt;/span&gt; $logger) 
 {
-    $logger-&amp;gt;info(&amp;#39;This is a injected service!&amp;#39;);
-    //code
-}
+    $logger&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;info&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;This is a injected service!&amp;#39;&lt;/span&gt;);
+    &lt;span style=&#34;color:#75715e&#34;&gt;//code
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In this action you inject &lt;strong&gt;LoggerInterface&lt;/strong&gt; directly and you don&amp;rsquo;t need to instantiate it inside the action!&lt;/p&gt;
 &lt;h2 id=&#34;flex-and-recipes&#34;&gt;Flex and Recipes&lt;/h2&gt;
 &lt;p&gt;Symfony Flex is a Composer plugin and it&amp;rsquo;s called when you run require, update, and remove composer commands.
 When you run those flex search commands inside &lt;strong&gt;Symfony Flex&lt;/strong&gt;, the server will take it, install it and configure it for you if the package is on there.
-The power of Flex is that you don&amp;rsquo;t have to watch all the libraries&amp;rsquo; readme files to configure your package since there is a recipe that does it for you.
+The power of Flex is that you don&amp;rsquo;t have to watch all the libraries&#39; readme files to configure your package since there is a recipe that does it for you.
 You don&amp;rsquo;t need to add your new bundle into AppKernel.php because flex already did it when you install it.
 If your package doesn&amp;rsquo;t exist, it fallbacks on Composer standard behaviour.&lt;/p&gt;
 &lt;p&gt;Flex keeps track of the recipes it installed in a &lt;strong&gt;symfony.lock&lt;/strong&gt; file, which must be committed to your code repository.
@@ -418,42 +431,42 @@ In addition, it introduces a performance increase (already in version 7 it was d
 &lt;h2 id=&#34;type-hinting-argument&#34;&gt;Type hinting argument&lt;/h2&gt;
 &lt;p&gt;Since PHP 5 it was possibile to specify the argument type passed to a function.&lt;/p&gt;
 &lt;p&gt;Example:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;class SimpleClass {
-    public $foo = &amp;#39;bar&amp;#39;;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;SimpleClass&lt;/span&gt; {
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; $foo &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;bar&amp;#39;&lt;/span&gt;;
 }
 
-$simpleClass = new SimpleClass;
+$simpleClass &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;SimpleClass&lt;/span&gt;;
 
-function test(SimpleClass $simpleClass){
-    return $simpleClass-&amp;gt;foo;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;SimpleClass&lt;/span&gt; $simpleClass){
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; $simpleClass&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;foo&lt;/span&gt;;
 }
 
-echo test($simpleClass);
+&lt;span style=&#34;color:#66d9ef&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test&lt;/span&gt;($simpleClass);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Since PHP 7.1 if it was passed a non SimpleClass type value to the function it generated a 500 error.&lt;/p&gt;
 &lt;p&gt;With PHP 7.2 the &lt;strong&gt;type hinting argument&lt;/strong&gt; can be declared as object, which means that it&amp;rsquo;s a generic object.&lt;/p&gt;
 &lt;p&gt;Example:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;class SimpleClass {
-    public $foo = &amp;#39;bar&amp;#39;;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;SimpleClass&lt;/span&gt; {
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; $foo &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;bar&amp;#39;&lt;/span&gt;;
 }
 
-class FirstClass extends SimpleClass {
-    public $foo = &amp;#39;baz&amp;#39;;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;FirstClass&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;extends&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;SimpleClass&lt;/span&gt; {
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; $foo &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;baz&amp;#39;&lt;/span&gt;;
 }
-class SecondClass extends SimpleClass{
-    public $foo = &amp;#39;foobar&amp;#39;;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;SecondClass&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;extends&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;SimpleClass&lt;/span&gt;{
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; $foo &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;foobar&amp;#39;&lt;/span&gt;;
 }
 
-$firstClass = new FirstClass;
-$secondClass = new SecondClass;
+$firstClass &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;FirstClass&lt;/span&gt;;
+$secondClass &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;SecondClass&lt;/span&gt;;
 
-function test(object $arg)
+&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;object&lt;/span&gt; $arg)
 {
-    return $arg-&amp;gt;var;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; $arg&lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;var&lt;/span&gt;;
 }
 
-echo test($firstClass);
+&lt;span style=&#34;color:#66d9ef&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test&lt;/span&gt;($firstClass);
 
-echo test($secondClass);
+&lt;span style=&#34;color:#66d9ef&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test&lt;/span&gt;($secondClass);
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In this example the code runs declaring the argument object type and then a generic object so it doesn&amp;rsquo;t generate a 500 error.
 Furthermore, this features permits to have a type &amp;ldquo;variance&amp;rdquo; implemented in the subclass for example.&lt;/p&gt;
@@ -461,34 +474,34 @@ Furthermore, this features permits to have a type &amp;ldquo;variance&amp;rdquo;
 &lt;h2 id=&#34;type-hinting-return-value&#34;&gt;Type hinting return value&lt;/h2&gt;
 &lt;p&gt;Since version 7.2 it is possible to declare &lt;strong&gt;type hint return value&lt;/strong&gt; as object.&lt;/p&gt;
 &lt;p&gt;Example:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;function test($arg) :object
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test&lt;/span&gt;($arg) &lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;object&lt;/span&gt;
 {
-    return new Foo($arg);
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Foo&lt;/span&gt;($arg);
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;abstract-methods-and-re-writable-interfaces&#34;&gt;Abstract methods and re-writable interfaces&lt;/h2&gt;
 &lt;p&gt;PHP 7.2 allows to &lt;strong&gt;overwrite abstract methods and interfaces&lt;/strong&gt; which is to omit the declaration type of a parameter in an abstract method extended by the parent class.&lt;/p&gt;
 &lt;p&gt;Example:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;abstract class foo
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;abstract&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;foo&lt;/span&gt;
 {
-    abstract function baz(string $yourVar);
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;abstract&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;baz&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;string&lt;/span&gt; $yourVar);
 }
 
-abstract class bar extends foo
+&lt;span style=&#34;color:#66d9ef&#34;&gt;abstract&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;bar&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;extends&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;foo&lt;/span&gt;
 {
-    abstract function baz($yourVar) : int;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;abstract&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;baz&lt;/span&gt;($yourVar) &lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;int&lt;/span&gt;;
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The same functionality also applies to interfaces, for example:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;interface foo
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;interface&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;foo&lt;/span&gt;
 {
-    public function test(string $yourVar);
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;string&lt;/span&gt; $yourVar);
 }
 
-class bar implements foo
+&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;bar&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;implements&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;foo&lt;/span&gt;
 {
-    public function test($yourVar)
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test&lt;/span&gt;($yourVar)
     {
-        //your code
-    }
+        &lt;span style=&#34;color:#75715e&#34;&gt;//your code
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    }
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This new feature allows to update parent classes without updating all their subclasses.&lt;/p&gt;
 &lt;p&gt;Probably this is a marginal improvement  (it will never be used so frequently).&lt;/p&gt;
@@ -496,15 +509,15 @@ class bar implements foo
 &lt;p&gt;Comma at the end of the last array element it&amp;rsquo;s valid in the PHP syntax, and sometimes it&amp;rsquo;s encouraged to add easily new elements and avoid analysis errors by missing comma.&lt;/p&gt;
 &lt;p&gt;Since PHP 7.2 version it is possible to use commas even for the &amp;ldquo;use&amp;rdquo; inside classes.&lt;/p&gt;
 &lt;p&gt;Example:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;use Foo\Bar\{
-    Foo,
-    Bar,
-    Baz,
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;use&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Foo\Bar\&lt;/span&gt;{
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;Foo&lt;/span&gt;,
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;Bar&lt;/span&gt;,
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;Baz&lt;/span&gt;,
 };
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;argon2-in-passwords-hash&#34;&gt;Argon2 in password&amp;rsquo;s hash&lt;/h2&gt;
 &lt;p&gt;Argon2 is a powerful hashing algorithm that was selected as the 2015 Password Hashing Competition winner, and PHP 7.2 introduces as a secure substitute for the Bcrypt algorithm.&lt;/p&gt;
 &lt;p&gt;The new PHP version introduces the PASSWORD_ARGON2I constant, which now can be used in password_ * function, following this syntax:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;password_hash(&amp;#39;secretpassword&amp;#39;, PASSWORD_ARGON2I);
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;password_hash&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;secretpassword&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;PASSWORD_ARGON2I&lt;/span&gt;);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Despite Bcrypt, which requires only one factor, Argon2 considers three different factors:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;A memory cost that defines Kib number to use during hashing (standard values are 1 &amp;laquo; 10 or 1024 KiB or 1 MiB);&lt;/li&gt;
@@ -519,8 +532,8 @@ class bar implements foo
 3. PASSWORD_ARGON2_DEFAULT_THREADS
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Example:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;$options = [&amp;#39;memory_cost&amp;#39; =&amp;gt; 1&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;lt;&lt;/span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;11&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;time_cost&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;=&lt;/span&gt;&amp;gt; 4, &amp;#39;threads&amp;#39; =&amp;gt; 2];
-password_hash(&amp;#39;secretpassword&amp;#39;, PASSWORD_ARGON2I, $options);
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;$options &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;memory_cost&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;11&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;time_cost&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;threads&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;];
+&lt;span style=&#34;color:#a6e22e&#34;&gt;password_hash&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;secretpassword&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;PASSWORD_ARGON2I&lt;/span&gt;, $options);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;libsodium-as-part-of-the-php-core&#34;&gt;Libsodium as part of the PHP Core&lt;/h2&gt;
 &lt;p&gt;Since version 7.2, PHP includes the &lt;strong&gt;Sodium library&lt;/strong&gt; in its core. Libsodium is a cross-platform library and cross-languages for encrypting, decrypting, signatures, password hashing and much more.
 The library was previously available by PECL.
@@ -528,11 +541,11 @@ PHP 7.2 is the first programming language that adds modern encrypting in its lib
 &lt;h2 id=&#34;count-scalar-values&#34;&gt;Count scalar values&lt;/h2&gt;
 &lt;p&gt;Did you know that it is possible to count scalar values? In reality this is insignificant , as the function count() returns only 1 for scalars.&lt;/p&gt;
 &lt;p&gt;Example:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;var_dump(count(null)); // int(0)
-var_dump(count(0)); // int(1)
-var_dump(count(4)); // int(1)
-var_dump(count(&amp;#39;4&amp;#39;)); // int(1)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Since PHP 7.2, it will show a message:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;var_dump&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;count&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;null&lt;/span&gt;)); &lt;span style=&#34;color:#75715e&#34;&gt;// int(0)
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;var_dump&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;count&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;)); &lt;span style=&#34;color:#75715e&#34;&gt;// int(1)
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;var_dump&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;count&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;)); &lt;span style=&#34;color:#75715e&#34;&gt;// int(1)
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;var_dump&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;count&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;4&amp;#39;&lt;/span&gt;)); &lt;span style=&#34;color:#75715e&#34;&gt;// int(1)
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Since PHP 7.2, it will show a message:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Warning: count(): The parameter must be an array or an object that implements Countable into / in / 4aIl2 on line 3.
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;new-features&#34;&gt;New features&lt;/h2&gt;
 &lt;p&gt;PHP 7.2 introduces some new features which can be very useful: ftp_append(), hash_hmac_algos(), imagesetclip(), imagegetclip(), imageopenpolygon(), imageresolution(), imagecreatefrombmp(), imagebmp().&lt;/p&gt;

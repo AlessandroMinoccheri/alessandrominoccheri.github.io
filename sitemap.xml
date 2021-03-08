@@ -1,129 +1,91 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>/</loc>
-    <lastmod>2021-01-29T16:40:59+01:00</lastmod>
+    <lastmod>2021-03-05T16:40:59+01:00</lastmod>
     <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/automation/</loc>
-    <lastmod>2021-01-29T16:40:59+01:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-03-05T16:40:59+01:00</lastmod>
+  </url><url>
+    <loc>/tags/dotfiles/</loc>
+    <lastmod>2021-03-05T16:40:59+01:00</lastmod>
+  </url><url>
+    <loc>/tags/github/</loc>
+    <lastmod>2021-03-05T16:40:59+01:00</lastmod>
+  </url><url>
+    <loc>/post/how-dotfiles-can-save-you-a-lot-of-time/</loc>
+    <lastmod>2021-03-05T16:40:59+01:00</lastmod>
+  </url><url>
+    <loc>/post/</loc>
+    <lastmod>2021-03-05T16:40:59+01:00</lastmod>
+  </url><url>
+    <loc>/tags/shell/</loc>
+    <lastmod>2021-03-05T16:40:59+01:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2021-03-05T16:40:59+01:00</lastmod>
+  </url><url>
     <loc>/tags/aws/</loc>
     <lastmod>2021-01-29T16:40:59+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/ci/</loc>
     <lastmod>2021-01-29T16:40:59+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/deploy/</loc>
     <lastmod>2021-01-29T16:40:59+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/deployonfriday/</loc>
     <lastmod>2021-01-29T16:40:59+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/php/</loc>
     <lastmod>2021-01-29T16:40:59+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
-    <lastmod>2021-01-29T16:40:59+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2021-01-29T16:40:59+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/code/</loc>
     <lastmod>2020-12-07T06:02:11+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/hexagonal-architecture/</loc>
     <lastmod>2020-12-07T06:02:11+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/symfony/</loc>
     <lastmod>2020-12-07T06:02:11+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/symfony-hexagonal-architecture/</loc>
     <lastmod>2020-12-07T06:02:11+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/lambda/</loc>
     <lastmod>2020-01-04T14:30:39+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/serverless/</loc>
     <lastmod>2020-01-04T14:30:39+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/symfony-aws-lambda-part2/</loc>
     <lastmod>2020-01-04T14:30:39+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/symfony-aws-lambda-part1/</loc>
     <lastmod>2019-10-31T08:11:25+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/archive/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/bitbucket-private-repository-in-your-projects/</loc>
     <lastmod>2018-10-02T08:58:31+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/two-authentications-systems-into-symfony/</loc>
     <lastmod>2018-07-17T15:43:08+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/symfony-4/</loc>
     <lastmod>2018-05-18T14:42:37+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/php7-2/</loc>
     <lastmod>2018-03-20T15:09:20+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/videos/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/categories/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/index/</loc>
   </url>
-  
 </urlset>

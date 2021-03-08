@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>automation on Alessandro Minoccheri</title>
-    <link>/tags/automation/</link>
-    <description>Alessandro Minoccheri (automation)</description>
+    <title>shell on Alessandro Minoccheri</title>
+    <link>/tags/shell/</link>
+    <description>Alessandro Minoccheri (shell)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 05 Mar 2021 16:40:59 +0100</lastBuildDate>
     
-    <atom:link href="/tags/automation/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/shell/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -21,19 +21,6 @@
 A dotfiles repository is a set of configurations that can be used, usually, on every Linux or OSX system.
 You can create your own configuration because&amp;hellip;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://dev.to/minompi/how-dotfiles-can-save-you-a-lot-of-time-55oe&#34;&gt;How dotfiles can save you a lot of time&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Deploy on Friday without fear</title>
-      <link>/post/deployonfriday/</link>
-      <pubDate>Fri, 29 Jan 2021 16:40:59 +0100</pubDate>
-      
-      <guid>/post/deployonfriday/</guid>
-      <description>&lt;p&gt;I have heard a lot of times: &amp;ldquo;Don&amp;rsquo;t deploy on Friday!&amp;rdquo;
-Well, I understand why, but I disagree with 99% of the cases.
-To understand my point of view, I would like to share some concepts about software&amp;hellip;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://medium.com/flowingis/why-you-should-deploy-on-friday-without-fear-80a26d3c17c1&#34;&gt;Why you should deploy on Friday without fear&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

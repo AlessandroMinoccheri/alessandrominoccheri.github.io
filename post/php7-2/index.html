@@ -14,9 +14,9 @@
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon-precomposed" href="favicon.png">
 
-<link rel="stylesheet" href="css/style.css?rnd=1611935595" />
+<link rel="stylesheet" href="css/style.css?rnd=1615199692" />
 
-<link rel="stylesheet" href="../css/style.css?rnd=1611935595"><link rel="stylesheet" href="../../css/style.css?rnd=1611935595">
+<link rel="stylesheet" href="../css/style.css?rnd=1615199692"><link rel="stylesheet" href="../../css/style.css?rnd=1615199692">
 
 <meta property="og:title" content="Better performances, high security, deprecated functions: here&#39;s  all the news about PHP 7.2" />
 <meta property="og:description" content="PHP 7.2 has many features about security, implementations and deprecated functions. In addition, it introduces a performance increase (already in version 7 it was done a great work): PHP 7.2 is 20% faster than version 7.0 and 10% faster than version 7.1.
@@ -24,9 +24,10 @@ Here&rsquo;s all the highlights offered by this new version.
 Type hinting argument Since PHP 5 it was possibile to specify the argument type passed to a function.
 Example:" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/post/php7-2/" />
-<meta property="article:published_time" content="2018-03-20T15:09:20+01:00" />
-<meta property="article:modified_time" content="2018-03-20T15:09:20+01:00" />
+<meta property="og:url" content="/post/php7-2/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2018-03-20T15:09:20&#43;01:00" />
+<meta property="article:modified_time" content="2018-03-20T15:09:20&#43;01:00" />
+
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Better performances, high security, deprecated functions: here&#39;s  all the news about PHP 7.2"/>
@@ -75,42 +76,42 @@ In addition, it introduces a performance increase (already in version 7 it was d
 <h2 id="type-hinting-argument">Type hinting argument</h2>
 <p>Since PHP 5 it was possibile to specify the argument type passed to a function.</p>
 <p>Example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">class SimpleClass {
-    public $foo = &#39;bar&#39;;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SimpleClass</span> {
+    <span style="color:#66d9ef">public</span> $foo <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;bar&#39;</span>;
 }
 
-$simpleClass = new SimpleClass;
+$simpleClass <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">SimpleClass</span>;
 
-function test(SimpleClass $simpleClass){
-    return $simpleClass-&gt;foo;
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">SimpleClass</span> $simpleClass){
+    <span style="color:#66d9ef">return</span> $simpleClass<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">foo</span>;
 }
 
-echo test($simpleClass);
+<span style="color:#66d9ef">echo</span> <span style="color:#a6e22e">test</span>($simpleClass);
 </code></pre></div><p>Since PHP 7.1 if it was passed a non SimpleClass type value to the function it generated a 500 error.</p>
 <p>With PHP 7.2 the <strong>type hinting argument</strong> can be declared as object, which means that it&rsquo;s a generic object.</p>
 <p>Example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">class SimpleClass {
-    public $foo = &#39;bar&#39;;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SimpleClass</span> {
+    <span style="color:#66d9ef">public</span> $foo <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;bar&#39;</span>;
 }
 
-class FirstClass extends SimpleClass {
-    public $foo = &#39;baz&#39;;
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FirstClass</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">SimpleClass</span> {
+    <span style="color:#66d9ef">public</span> $foo <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;baz&#39;</span>;
 }
-class SecondClass extends SimpleClass{
-    public $foo = &#39;foobar&#39;;
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SecondClass</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">SimpleClass</span>{
+    <span style="color:#66d9ef">public</span> $foo <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;foobar&#39;</span>;
 }
 
-$firstClass = new FirstClass;
-$secondClass = new SecondClass;
+$firstClass <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">FirstClass</span>;
+$secondClass <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">SecondClass</span>;
 
-function test(object $arg)
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">object</span> $arg)
 {
-    return $arg-&gt;var;
+    <span style="color:#66d9ef">return</span> $arg<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">var</span>;
 }
 
-echo test($firstClass);
+<span style="color:#66d9ef">echo</span> <span style="color:#a6e22e">test</span>($firstClass);
 
-echo test($secondClass);
+<span style="color:#66d9ef">echo</span> <span style="color:#a6e22e">test</span>($secondClass);
 
 </code></pre></div><p>In this example the code runs declaring the argument object type and then a generic object so it doesn&rsquo;t generate a 500 error.
 Furthermore, this features permits to have a type &ldquo;variance&rdquo; implemented in the subclass for example.</p>
@@ -118,34 +119,34 @@ Furthermore, this features permits to have a type &ldquo;variance&rdquo; impleme
 <h2 id="type-hinting-return-value">Type hinting return value</h2>
 <p>Since version 7.2 it is possible to declare <strong>type hint return value</strong> as object.</p>
 <p>Example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">function test($arg) :object
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">test</span>($arg) <span style="color:#f92672">:</span><span style="color:#a6e22e">object</span>
 {
-    return new Foo($arg);
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Foo</span>($arg);
 }
 </code></pre></div><h2 id="abstract-methods-and-re-writable-interfaces">Abstract methods and re-writable interfaces</h2>
 <p>PHP 7.2 allows to <strong>overwrite abstract methods and interfaces</strong> which is to omit the declaration type of a parameter in an abstract method extended by the parent class.</p>
 <p>Example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">abstract class foo
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">foo</span>
 {
-    abstract function baz(string $yourVar);
+    <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">baz</span>(<span style="color:#a6e22e">string</span> $yourVar);
 }
 
-abstract class bar extends foo
+<span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">bar</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">foo</span>
 {
-    abstract function baz($yourVar) : int;
+    <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">baz</span>($yourVar) <span style="color:#f92672">:</span> <span style="color:#a6e22e">int</span>;
 }
 </code></pre></div><p>The same functionality also applies to interfaces, for example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">interface foo
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">foo</span>
 {
-    public function test(string $yourVar);
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">string</span> $yourVar);
 }
 
-class bar implements foo
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">bar</span> <span style="color:#66d9ef">implements</span> <span style="color:#a6e22e">foo</span>
 {
-    public function test($yourVar)
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">test</span>($yourVar)
     {
-        //your code
-    }
+        <span style="color:#75715e">//your code
+</span><span style="color:#75715e"></span>    }
 }
 </code></pre></div><p>This new feature allows to update parent classes without updating all their subclasses.</p>
 <p>Probably this is a marginal improvement  (it will never be used so frequently).</p>
@@ -153,15 +154,15 @@ class bar implements foo
 <p>Comma at the end of the last array element it&rsquo;s valid in the PHP syntax, and sometimes it&rsquo;s encouraged to add easily new elements and avoid analysis errors by missing comma.</p>
 <p>Since PHP 7.2 version it is possible to use commas even for the &ldquo;use&rdquo; inside classes.</p>
 <p>Example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">use Foo\Bar\{
-    Foo,
-    Bar,
-    Baz,
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Foo\Bar\</span>{
+    <span style="color:#a6e22e">Foo</span>,
+    <span style="color:#a6e22e">Bar</span>,
+    <span style="color:#a6e22e">Baz</span>,
 };
 </code></pre></div><h2 id="argon2-in-passwords-hash">Argon2 in password&rsquo;s hash</h2>
 <p>Argon2 is a powerful hashing algorithm that was selected as the 2015 Password Hashing Competition winner, and PHP 7.2 introduces as a secure substitute for the Bcrypt algorithm.</p>
 <p>The new PHP version introduces the PASSWORD_ARGON2I constant, which now can be used in password_ * function, following this syntax:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">password_hash(&#39;secretpassword&#39;, PASSWORD_ARGON2I);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#a6e22e">password_hash</span>(<span style="color:#e6db74">&#39;secretpassword&#39;</span>, <span style="color:#a6e22e">PASSWORD_ARGON2I</span>);
 </code></pre></div><p>Despite Bcrypt, which requires only one factor, Argon2 considers three different factors:</p>
 <ul>
 <li>A memory cost that defines Kib number to use during hashing (standard values are 1 &laquo; 10 or 1024 KiB or 1 MiB);</li>
@@ -176,8 +177,8 @@ class bar implements foo
 3. PASSWORD_ARGON2_DEFAULT_THREADS
 </code></pre>
 <p>Example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$options = [&#39;memory_cost&#39; =&gt; 1<span style="color:#960050;background-color:#1e0010">&lt;</span>&lt;<span style="color:#f92672">11</span><span style="color:#960050;background-color:#1e0010">,</span> <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">time_cost</span><span style="color:#960050;background-color:#1e0010">&#39;</span> <span style="color:#960050;background-color:#1e0010">=</span>&gt; 4, &#39;threads&#39; =&gt; 2];
-password_hash(&#39;secretpassword&#39;, PASSWORD_ARGON2I, $options);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$options <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;memory_cost&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">&lt;&lt;</span><span style="color:#ae81ff">11</span>, <span style="color:#e6db74">&#39;time_cost&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">4</span>, <span style="color:#e6db74">&#39;threads&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">2</span>];
+<span style="color:#a6e22e">password_hash</span>(<span style="color:#e6db74">&#39;secretpassword&#39;</span>, <span style="color:#a6e22e">PASSWORD_ARGON2I</span>, $options);
 </code></pre></div><h2 id="libsodium-as-part-of-the-php-core">Libsodium as part of the PHP Core</h2>
 <p>Since version 7.2, PHP includes the <strong>Sodium library</strong> in its core. Libsodium is a cross-platform library and cross-languages for encrypting, decrypting, signatures, password hashing and much more.
 The library was previously available by PECL.
@@ -185,11 +186,11 @@ PHP 7.2 is the first programming language that adds modern encrypting in its lib
 <h2 id="count-scalar-values">Count scalar values</h2>
 <p>Did you know that it is possible to count scalar values? In reality this is insignificant , as the function count() returns only 1 for scalars.</p>
 <p>Example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">var_dump(count(null)); // int(0)
-var_dump(count(0)); // int(1)
-var_dump(count(4)); // int(1)
-var_dump(count(&#39;4&#39;)); // int(1)
-</code></pre></div><p>Since PHP 7.2, it will show a message:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#a6e22e">var_dump</span>(<span style="color:#a6e22e">count</span>(<span style="color:#66d9ef">null</span>)); <span style="color:#75715e">// int(0)
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>(<span style="color:#a6e22e">count</span>(<span style="color:#ae81ff">0</span>)); <span style="color:#75715e">// int(1)
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>(<span style="color:#a6e22e">count</span>(<span style="color:#ae81ff">4</span>)); <span style="color:#75715e">// int(1)
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>(<span style="color:#a6e22e">count</span>(<span style="color:#e6db74">&#39;4&#39;</span>)); <span style="color:#75715e">// int(1)
+</span></code></pre></div><p>Since PHP 7.2, it will show a message:</p>
 <pre><code>Warning: count(): The parameter must be an array or an object that implements Countable into / in / 4aIl2 on line 3.
 </code></pre><h2 id="new-features">New features</h2>
 <p>PHP 7.2 introduces some new features which can be very useful: ftp_append(), hash_hmac_algos(), imagesetclip(), imagegetclip(), imageopenpolygon(), imageresolution(), imagecreatefrombmp(), imagebmp().</p>
