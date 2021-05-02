@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>github on Alessandro Minoccheri</title>
-    <link>/tags/github/</link>
-    <description>Alessandro Minoccheri (github)</description>
+    <title>build on Alessandro Minoccheri</title>
+    <link>/tags/build/</link>
+    <description>Alessandro Minoccheri (build)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 02 May 2021 21:10:25 +0200</lastBuildDate>
     
-    <atom:link href="/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/build/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -22,19 +22,6 @@ Nowadays I can admit that there is another choice that I have explored and used 
 What I mean is the functionality of pushing your docker image through your GitHub Actions during your CI process.&lt;/p&gt;
 &lt;p&gt;You can read my article here:&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://dev.to/minompi/push-and-publish-docker-images-with-github-actions-8a3&#34;&gt;Push and Publish Docker Images With Github Actions&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>How Dotfiles Can Save You a Lot of Time</title>
-      <link>/post/how-dotfiles-can-save-you-a-lot-of-time/</link>
-      <pubDate>Fri, 05 Mar 2021 16:40:59 +0100</pubDate>
-      
-      <guid>/post/how-dotfiles-can-save-you-a-lot-of-time/</guid>
-      <description>&lt;p&gt;As a developer, I try to automate and optimize all of my processes and workflow.
-A dotfiles repository is a set of configurations that can be used, usually, on every Linux or OSX system.
-You can create your own configuration because&amp;hellip;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://dev.to/minompi/how-dotfiles-can-save-you-a-lot-of-time-55oe&#34;&gt;How dotfiles can save you a lot of time&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

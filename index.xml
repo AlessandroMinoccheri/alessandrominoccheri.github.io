@@ -6,10 +6,24 @@
     <description>Alessandro Minoccheri</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Mar 2021 16:40:59 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 02 May 2021 21:10:25 +0200</lastBuildDate>
     
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Push and Publish Docker Images With Github Actions</title>
+      <link>/post/push-and-publish-docker-images-with-github-actions/</link>
+      <pubDate>Sun, 02 May 2021 21:10:25 +0200</pubDate>
+      
+      <guid>/post/push-and-publish-docker-images-with-github-actions/</guid>
+      <description>&lt;p&gt;In many articles, I mentioned many times about using GitHub Actions because they are a good choice for a lot of reasons.
+Nowadays I can admit that there is another choice that I have explored and used a lot these days.
+What I mean is the functionality of pushing your docker image through your GitHub Actions during your CI process.&lt;/p&gt;
+&lt;p&gt;You can read my article here:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://dev.to/minompi/push-and-publish-docker-images-with-github-actions-8a3&#34;&gt;Push and Publish Docker Images With Github Actions&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>How Dotfiles Can Save You a Lot of Time</title>
