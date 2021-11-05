@@ -3,8 +3,29 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/</loc>
-    <lastmod>2021-05-02T21:10:25+02:00</lastmod>
+    <lastmod>2021-11-04T21:10:25+02:00</lastmod>
     <priority>0</priority>
+  </url><url>
+    <loc>/tags/agile/</loc>
+    <lastmod>2021-11-04T21:10:25+02:00</lastmod>
+  </url><url>
+    <loc>/tags/code/</loc>
+    <lastmod>2021-11-04T21:10:25+02:00</lastmod>
+  </url><url>
+    <loc>/tags/learn/</loc>
+    <lastmod>2021-11-04T21:10:25+02:00</lastmod>
+  </url><url>
+    <loc>/tags/learning/</loc>
+    <lastmod>2021-11-04T21:10:25+02:00</lastmod>
+  </url><url>
+    <loc>/post/learning-new-language-code/</loc>
+    <lastmod>2021-11-04T21:10:25+02:00</lastmod>
+  </url><url>
+    <loc>/post/</loc>
+    <lastmod>2021-11-04T21:10:25+02:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2021-11-04T21:10:25+02:00</lastmod>
   </url><url>
     <loc>/tags/automation/</loc>
     <lastmod>2021-05-02T21:10:25+02:00</lastmod>
@@ -18,13 +39,7 @@
     <loc>/tags/github/</loc>
     <lastmod>2021-05-02T21:10:25+02:00</lastmod>
   </url><url>
-    <loc>/post/</loc>
-    <lastmod>2021-05-02T21:10:25+02:00</lastmod>
-  </url><url>
     <loc>/post/push-and-publish-docker-images-with-github-actions/</loc>
-    <lastmod>2021-05-02T21:10:25+02:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
     <lastmod>2021-05-02T21:10:25+02:00</lastmod>
   </url><url>
     <loc>/tags/dotfiles/</loc>
@@ -50,9 +65,6 @@
   </url><url>
     <loc>/tags/php/</loc>
     <lastmod>2021-01-29T16:40:59+01:00</lastmod>
-  </url><url>
-    <loc>/tags/code/</loc>
-    <lastmod>2020-12-07T06:02:11+01:00</lastmod>
   </url><url>
     <loc>/tags/hexagonal-architecture/</loc>
     <lastmod>2020-12-07T06:02:11+01:00</lastmod>

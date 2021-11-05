@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>code on Alessandro Minoccheri</title>
-    <link>/tags/code/</link>
-    <description>Alessandro Minoccheri (code)</description>
+    <title>agile on Alessandro Minoccheri</title>
+    <link>/tags/agile/</link>
+    <description>Alessandro Minoccheri (agile)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 04 Nov 2021 21:10:25 +0200</lastBuildDate>
     
-    <atom:link href="/tags/code/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/agile/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -23,18 +23,6 @@ Many times other developers ask me:
 “How can I learn a new programming language?”&lt;/p&gt;
 &lt;p&gt;You can read my article here:&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://dev.to/minompi/learning-a-new-programming-language-1d2j&#34;&gt;Learning a new programming language&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Symfony and Hexagonal Architecture</title>
-      <link>/post/symfony-hexagonal-architecture/</link>
-      <pubDate>Mon, 07 Dec 2020 06:02:11 +0100</pubDate>
-      
-      <guid>/post/symfony-hexagonal-architecture/</guid>
-      <description>&lt;p&gt;I have been working on many Symfony projects in my career and one of the most common problems where customers call our company is that their software is blocked in the old framework version, or they are not maintainable because it costs a lot to find and fix bugs.&lt;/p&gt;
-&lt;p&gt;In this article, I will share my experience with Hexagonal architecture with Symfony to improve your projects and how to create maintainable software.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://minompi.medium.com/symfony-and-hexagonal-architecture-b3c4704e94de&#34;&gt;Symfony and Hexagonal Architecture&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

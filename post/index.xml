@@ -6,10 +6,25 @@
     <description>Alessandro Minoccheri (Posts)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 May 2021 21:10:25 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 04 Nov 2021 21:10:25 +0200</lastBuildDate>
     
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Learning a new programming language</title>
+      <link>/post/learning-new-language-code/</link>
+      <pubDate>Thu, 04 Nov 2021 21:10:25 +0200</pubDate>
+      
+      <guid>/post/learning-new-language-code/</guid>
+      <description>&lt;p&gt;In this period every day, a new programming language could be released and can become one of the most interesting in a few months.
+So it&amp;rsquo;s difficult for a developer to learn every day a new different programming language because you need the time to explore it.
+Many times other developers ask me:
+“How can I learn a new programming language?”&lt;/p&gt;
+&lt;p&gt;You can read my article here:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://dev.to/minompi/learning-a-new-programming-language-1d2j&#34;&gt;Learning a new programming language&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Push and Publish Docker Images With Github Actions</title>
