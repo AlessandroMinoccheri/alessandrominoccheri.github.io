@@ -6,10 +6,23 @@
     <description>Alessandro Minoccheri (Posts)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Nov 2021 21:10:25 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 01 Jan 2022 21:10:25 +0200</lastBuildDate>
     
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Learning a new programming language</title>
+      <link>/post/phparkitect/</link>
+      <pubDate>Sat, 01 Jan 2022 21:10:25 +0200</pubDate>
+      
+      <guid>/post/phparkitect/</guid>
+      <description>&lt;p&gt;In every project there is at least an architectural rule usually like: every class inside Controller directory should be called with suffix Controller.
+PHPArkitect is a tool that helps you to keep your PHP codebase coherent and solid, by permitting you to add some architectural constraint check to your workflow.&lt;/p&gt;
+&lt;p&gt;You can read my article here:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://dev.to/minompi/phparkitect-put-your-architectural-rules-under-test-1c99&#34;&gt;PHPArkitect&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Learning a new programming language</title>
