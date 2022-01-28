@@ -6,10 +6,25 @@
     <description>Alessandro Minoccheri (Posts)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Jan 2022 21:10:25 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 28 Jan 2022 17:59:22 +0100</lastBuildDate>
     
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Recap 2021 and 2022 Goals</title>
+      <link>/post/recap-2021-and-2022-goals/</link>
+      <pubDate>Fri, 28 Jan 2022 17:59:22 +0100</pubDate>
+      
+      <guid>/post/recap-2021-and-2022-goals/</guid>
+      <description>&lt;p&gt;Building a career it&amp;rsquo;s difficult sometimes because you don&amp;rsquo;t know what you want next or what you want to achieve.
+For this reason, I take some days to understand it and try to design the next steps for my career.
+Sometimes I need to change a lot of things but it&amp;rsquo;s important to follow our dream.&lt;/p&gt;
+&lt;p&gt;Remember that a career is more than a job and every company (or most of them) is hiring developers.&lt;/p&gt;
+&lt;p&gt;You can read my article here:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://dev.to/minompi/2021-recap-and-2022-goals-74h&#34;&gt;Recap 2021 and 2022 Goals&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>PHPArkitect: Put your architectural rules under test!</title>

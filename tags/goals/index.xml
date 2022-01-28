@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>goals on Alessandro Minoccheri</title>
+    <link>/tags/goals/</link>
+    <description>Alessandro Minoccheri (goals)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 28 Jan 2022 17:59:22 +0100</lastBuildDate>
+    
+    <atom:link href="/tags/goals/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Recap 2021 and 2022 Goals</title>
+      <link>/post/recap-2021-and-2022-goals/</link>
+      <pubDate>Fri, 28 Jan 2022 17:59:22 +0100</pubDate>
+      
+      <guid>/post/recap-2021-and-2022-goals/</guid>
+      <description>&lt;p&gt;Building a career it&amp;rsquo;s difficult sometimes because you don&amp;rsquo;t know what you want next or what you want to achieve.
+For this reason, I take some days to understand it and try to design the next steps for my career.
+Sometimes I need to change a lot of things but it&amp;rsquo;s important to follow our dream.&lt;/p&gt;
+&lt;p&gt;Remember that a career is more than a job and every company (or most of them) is hiring developers.&lt;/p&gt;
+&lt;p&gt;You can read my article here:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://dev.to/minompi/2021-recap-and-2022-goals-74h&#34;&gt;Recap 2021 and 2022 Goals&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

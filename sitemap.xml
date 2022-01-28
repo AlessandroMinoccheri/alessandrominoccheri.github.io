@@ -3,8 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/</loc>
-    <lastmod>2022-01-01T21:10:25+02:00</lastmod>
+    <lastmod>2022-01-28T17:59:22+01:00</lastmod>
     <priority>0</priority>
+  </url><url>
+    <loc>/tags/achievement/</loc>
+    <lastmod>2022-01-28T17:59:22+01:00</lastmod>
+  </url><url>
+    <loc>/tags/goals/</loc>
+    <lastmod>2022-01-28T17:59:22+01:00</lastmod>
+  </url><url>
+    <loc>/tags/improvements/</loc>
+    <lastmod>2022-01-28T17:59:22+01:00</lastmod>
+  </url><url>
+    <loc>/post/</loc>
+    <lastmod>2022-01-28T17:59:22+01:00</lastmod>
+  </url><url>
+    <loc>/post/recap-2021-and-2022-goals/</loc>
+    <lastmod>2022-01-28T17:59:22+01:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2022-01-28T17:59:22+01:00</lastmod>
   </url><url>
     <loc>/tags/architecture/</loc>
     <lastmod>2022-01-01T21:10:25+02:00</lastmod>
@@ -15,13 +33,7 @@
     <loc>/post/phparkitect/</loc>
     <lastmod>2022-01-01T21:10:25+02:00</lastmod>
   </url><url>
-    <loc>/post/</loc>
-    <lastmod>2022-01-01T21:10:25+02:00</lastmod>
-  </url><url>
     <loc>/tags/standard/</loc>
-    <lastmod>2022-01-01T21:10:25+02:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
     <lastmod>2022-01-01T21:10:25+02:00</lastmod>
   </url><url>
     <loc>/tags/team/</loc>
