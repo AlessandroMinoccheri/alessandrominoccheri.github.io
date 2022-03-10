@@ -6,10 +6,23 @@
     <description>Alessandro Minoccheri (github)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 May 2021 21:10:25 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 08 Mar 2022 21:10:25 +0200</lastBuildDate>
     
     <atom:link href="/tags/github/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to test Github Actions locally</title>
+      <link>/post/how-to-test-github-actions-locally/</link>
+      <pubDate>Tue, 08 Mar 2022 21:10:25 +0200</pubDate>
+      
+      <guid>/post/how-to-test-github-actions-locally/</guid>
+      <description>&lt;p&gt;Have you ever wondered how you can test your Github Actions locally without having to commit to testing them?
+Here&amp;rsquo;s how you could do it!
+Thanks to act!&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://dev.to/minompi/how-to-test-github-actions-locally-3ipk&#34;&gt;How to test Github Actions locally&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Push and Publish Docker Images With Github Actions</title>
